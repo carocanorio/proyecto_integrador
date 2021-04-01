@@ -6,10 +6,13 @@
 header{
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
+    background-color: black;
 }
-a{
+p.header, a{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
     text-decoration: none;
-    color: black;
 }
 /*Header*/
 
@@ -22,4 +25,24 @@ footer{
 /*Detail.track*/
 h1.song{
     font-family:'Josefin Sans', sans-serif;
+    background-color:rgb(176, 224, 230);
+    color: white;
+    display: flex;
+    padding: 100px;
+    margin: 0px;
 }
+h3.eyes, h4.halsey, a.hal{
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+}
+section.track{
+    background-color:006699;
+    text-align: right;
+
+}
+aside{
+    display: flex;
+    margin: 0px;
+    padding: 60px;
+}
+
