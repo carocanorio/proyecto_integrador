@@ -1,3 +1,16 @@
 *{
     box-sizing: border-box;
 }
+
+/*Header*/
+header{
+    display: flex;
+}
+/*Header*/
+
+/*Footer*/
+footer{
+    display: flex;
+}
+/*Footer*/
+
