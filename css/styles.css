@@ -5,6 +5,11 @@
 /*Header*/
 header{
     display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 /*Header*/
 
@@ -14,3 +19,7 @@ footer{
 }
 /*Footer*/
 
+/*Detail.track*/
+h1.song{
+    font-family:'Josefin Sans', sans-serif;
+}
