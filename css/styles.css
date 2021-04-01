@@ -7,7 +7,10 @@ header{
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
     background-color: black;
+    margin: 0px;
+    justify-content: space-around;
 }
+
 p.header, a{
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -24,25 +27,25 @@ footer{
 
 /*Detail.track*/
 h1.song{
+    display: flex;
     font-family:'Josefin Sans', sans-serif;
     background-color:rgb(176, 224, 230);
     color: white;
     display: flex;
     padding: 100px;
     margin: 0px;
+    justify-content: center;
+    font-size: 90px;
 }
 h3.eyes, h4.halsey, a.hal{
     font-family: 'Josefin Sans', sans-serif;
     color: black;
 }
-section.track{
-    background-color:006699;
+h1.song, h4.halsey{
     text-align: right;
-
 }
-aside{
-    display: flex;
-    margin: 0px;
-    padding: 60px;
+section.track{
+    flex-direction: row;
+    align-items: baseline;
+    align-items: flex-start;
 }
-
