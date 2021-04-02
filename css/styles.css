@@ -24,13 +24,15 @@ p.header, a{
 footer{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 13px;
+    margin: 16px;
+}
+a.foot{
+    color:black;
+    text-decoration: none;
 }
 /*Footer*/
 
 /*Detail.track*/
-body{
-    background-color:rgb(169, 169, 169) ;
-}
 section.track{
     flex-direction: row;
     flex-wrap: wrap;
@@ -51,7 +53,7 @@ h1.song{
     font-size: 90px;
     letter-spacing: 5px;
 }
-h3.eyes, h4.halsey, a.hal, a.si2, h6.creds{
+h3.eyes, h4.halsey, a.hal, a.si2{
     font-family: 'Josefin Sans', sans-serif;
     color: black;
     font-size: 22px;
@@ -66,7 +68,4 @@ a.si2{
 h3.eyes{
     font-size: 45px;
 }
-h6.creds{
-    font-size: 15px;
-    display: flex;
-}
+
