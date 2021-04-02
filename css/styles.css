@@ -9,6 +9,7 @@ header{
     background-color: black;
     margin: 0px;
     justify-content: space-around;
+    padding: 0px;
 }
 
 p.header, a{
@@ -21,31 +22,51 @@ p.header, a{
 
 /*Footer*/
 footer{
-    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
 }
 /*Footer*/
 
 /*Detail.track*/
-h1.song{
-    display: flex;
-    font-family:'Josefin Sans', sans-serif;
-    background-color:rgb(176, 224, 230);
-    color: white;
-    display: flex;
-    padding: 100px;
-    margin: 0px;
-    justify-content: center;
-    font-size: 90px;
-}
-h3.eyes, h4.halsey, a.hal{
-    font-family: 'Josefin Sans', sans-serif;
-    color: black;
-}
-h1.song, h4.halsey{
-    text-align: right;
+body{
+    background-color:rgb(169, 169, 169) ;
 }
 section.track{
     flex-direction: row;
-    align-items: baseline;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    margin:0px;
+}
+div.img{
+    padding: 9px;
+}
+div.sey{
+    padding: 15px;
+}
+h1.song{
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 90px;
+    letter-spacing: 5px;
+}
+h3.eyes, h4.halsey, a.hal, a.si2, h6.creds{
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-size: 22px;
+}
+a.si2{
+    padding: 12px;
+    background-color: black ;
+    color: white;
+    font-size: 18px;
+    border-radius: 22px;
+}
+h3.eyes{
+    font-size: 45px;
+}
+h6.creds{
+    font-size: 15px;
+    display: flex;
 }
