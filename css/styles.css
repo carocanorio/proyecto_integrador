@@ -1,6 +1,8 @@
+/*Selector Universal*/
 *{
     box-sizing: border-box;
 }
+/*Selector Universal*/
 
 /*Header*/
 header{
@@ -52,6 +54,7 @@ h1.song{
     text-align: left;
     font-size: 90px;
     letter-spacing: 5px;
+    margin: 30px;
 }
 h3.eyes, h4.halsey, a.hal, a.si2{
     font-family: 'Josefin Sans', sans-serif;
@@ -68,4 +71,49 @@ a.si2{
 h3.eyes{
     font-size: 45px;
 }
-
+/*Detail.track*/
+section.artist{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    margin:0px;
+}
+div.imgartist{
+    padding: 9px;
+}
+div.contenido{
+    padding: 15px;
+}
+h1.she{
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 90px;
+    letter-spacing: 5px;
+    margin: 30px;
+}
+h4.she2, ol.toptracks, li.top, h3.biblioteca, h4.she3{
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-size: 22px;
+}
+ol.toptracks , li.top{
+    margin: 6px;
+}
+h3.biblioteca{
+    font-size: 45px;
+    margin: 15px;
+    text-indent: -2px;
+}
+h4.she3{
+margin: 8px;
+}
+a.halsi{
+    padding: 12px;
+    background-color: black ;
+    color: white;
+    font-size: 18px;
+    border-radius: 22px;
+}
+/*Detail.artist*/
