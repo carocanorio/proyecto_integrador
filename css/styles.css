@@ -4,16 +4,21 @@
 }
 /*Selector Universal*/
 
+/*Body*/
+body{
+    background-color:rgb(250, 250, 210) ;
+}
+/*Body*/
+
 /*Header*/
 header{
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
-    background-color: black;
     margin: 0px;
-    justify-content: space-around;
     padding: 0px;
+    margin: 0px;
+    justify-content: space-between;
 }
-
 p.header, a{
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -27,12 +32,60 @@ footer{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 13px;
     margin: 16px;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 280px;
+    color: white;
 }
 a.foot{
-    color:black;
+    color:white;
     text-decoration: none;
 }
 /*Footer*/
+
+/*Home*/
+body.presentacion{
+    background-image: url(../img/fotodiscoblanco_auto_x2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a.pre,a.pre2, a.pre3{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    background-color: none;
+    margin: 10px;
+    letter-spacing: 3px;
+    text-align: right;
+}
+section.pres{
+    text-align: left;
+    text-indent: -50px;
+}
+h1.prese, h3.presen{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 90px;
+    letter-spacing: 10px;
+    margin: 56px;
+    align-items: flex-start;
+}
+h3.presen{
+    font-size: 20px;
+    padding: 0px;
+    line-height: 3px;
+}
+section.artistas{
+    display: flex;
+    margin: 100px;
+    padding: 6px;
+    flex-direction: row;
+}
+img.artist{
+    margin: 3px;
+}
 
 /*Detail.track*/
 section.track{
