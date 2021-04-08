@@ -4,12 +4,6 @@
 }
 /*Selector Universal*/
 
-/*Body*/
-body{
-    background-color:rgb(250, 250, 210) ;
-}
-/*Body*/
-
 /*Header*/
 header{
     display: flex;
@@ -18,6 +12,9 @@ header{
     padding: 0px;
     margin: 0px;
     justify-content: space-between;
+}
+img.logo{
+    text-align: right;
 }
 p.header, a{
     letter-spacing: 2px;
@@ -45,7 +42,7 @@ a.foot{
 
 /*Home*/
 body.presentacion{
-    background-image: url(../img/fotodiscoblanco_auto_x2.jpg);
+    background-image: url(../img/fotomujercantando_auto_x2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -86,8 +83,12 @@ section.artistas{
 img.artist{
     margin: 3px;
 }
+/*Home*/
 
 /*Detail.track*/
+body{
+    background-color:	rgb(216, 191, 216) ;
+}
 section.track{
     flex-direction: row;
     flex-wrap: wrap;
