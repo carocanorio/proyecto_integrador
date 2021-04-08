@@ -170,3 +170,58 @@ a.halsi{
     border-radius: 22px;
 }
 /*Detail.artist*/
+
+
+
+/*detail.genres*/
+
+.contenedor_detail_genres_albumes {
+
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    
+  
+}
+
+.albumes_detail_genres {
+
+    width: 20%;
+
+}
+
+.contenedor_detail_genres_artistas {
+
+    display: flex;
+    flex-wrap:wrap;
+
+}
+
+.artistas_detail_genres {
+
+    width: 20%;
+}
+h4, h5 {
+    font-family:'Josefin Sans', sans-serif;
+}
+h1.detail_genres{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+}
+.detail_genres {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+}
+
+body.detalle_genero {
+    background-image: linear-gradient(#6c6cff, #6b3636);
+
+}
+
+.albumes_detail_genres_image img {
+    border-radius: 10%;
+}
+
+.artistas_detail_genres_image img {
+border-radius: 50%;
+}
