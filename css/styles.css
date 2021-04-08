@@ -31,7 +31,7 @@ footer{
     margin: 16px;
     display: flex;
     align-items: flex-end;
-    padding-top: 280px;
+    padding-top: 80px;
     color: white;
 }
 a.foot{
@@ -171,3 +171,19 @@ a.halsi{
     border-radius: 22px;
 }
 /*Detail.artist*/
+
+/*Detail album*/
+div.info{
+    padding: 15px;
+}
+h1.dom{
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 80px;
+    letter-spacing: 3px;
+    margin: 30px;
+}
+ul.lista1, ul.lista2{
+    margin: 6px
+}
