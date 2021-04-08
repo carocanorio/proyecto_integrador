@@ -195,6 +195,7 @@ ul.lista1, ul.lista2{
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
+    padding: 15px;
     
   
 }
@@ -209,11 +210,11 @@ ul.lista1, ul.lista2{
 
     display: flex;
     flex-wrap:wrap;
-
+    padding: 15px;
 }
 
 .artistas_detail_genres {
-
+     text-align: center;
     width: 20%;
 }
 h4, h5 {
@@ -222,7 +223,20 @@ h4, h5 {
 h1.detail_genres{
     font-family:'Josefin Sans', sans-serif;
     color: white;
+    text-align: left;
+    margin: 5%;
+    font-size: 50px;
+    padding: 25px;
 }
+.detail_genres_tp {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 70px;
+    padding: 30px;
+}
+
 .detail_genres {
     font-family:'Josefin Sans', sans-serif;
     color: white;
@@ -235,6 +249,11 @@ body.detalle_genero {
 
 .albumes_detail_genres_image img {
     border-radius: 10%;
+
+}
+
+.albumes_detail_genres_image h5 {
+    color: rgba(245, 245, 245, 0.795);
 }
 
 .artistas_detail_genres_image img {
