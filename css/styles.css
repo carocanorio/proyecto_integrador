@@ -87,7 +87,7 @@ img.artist{
 
 /*Detail.track*/
 body{
-    background-color:	rgb(216, 191, 216) ;
+    background-color: rgb(214, 179, 247);
 }
 section.track{
     flex-direction: row;
