@@ -1,0 +1,285 @@
+/*Selector Universal*/
+*{
+    box-sizing: border-box;
+}
+/*Selector Universal*/
+
+/*Header*/
+header{
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+    justify-content: space-between;
+}
+img.logo{
+    text-align: right;
+}
+p.header, a{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+}
+/*Header*/
+
+/*Footer*/
+footer{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    margin: 16px;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 80px;
+    color: white;
+}
+a.foot{
+    color:white;
+    text-decoration: none;
+}
+/*Footer*/
+
+/*Home*/
+body.presentacion{
+    background-image: url(../img/fotomujercantando_auto_x2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a.pre,a.pre2, a.pre3{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    background-color: none;
+    margin: 10px;
+    letter-spacing: 3px;
+    text-align: right;
+}
+section.pres{
+    text-align: left;
+    text-indent: -50px;
+}
+h1.prese, h3.presen{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    font-size: 90px;
+    letter-spacing: 10px;
+    margin: 56px;
+    align-items: flex-start;
+}
+h3.presen{
+    font-size: 20px;
+    padding: 0px;
+    line-height: 3px;
+}
+section.artistas{
+    display: flex;
+    margin: 100px;
+    padding: 6px;
+    flex-direction: row;
+}
+img.artist{
+    margin: 3px;
+}
+/*Home*/
+
+/*Detail.track*/
+body{
+    background-color: rgb(214, 179, 247);
+}
+section.track{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    margin:0px;
+}
+div.img{
+    padding: 9px;
+}
+div.sey{
+    padding: 15px;
+}
+h1.song{
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 90px;
+    letter-spacing: 5px;
+    margin: 30px;
+}
+h3.eyes, h4.halsey, a.hal, a.si2{
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-size: 22px;
+}
+a.si2{
+    padding: 12px;
+    background-color: black ;
+    color: white;
+    font-size: 18px;
+    border-radius: 22px;
+}
+h3.eyes{
+    font-size: 45px;
+}
+/*Detail.track*/
+section.artist{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    margin:0px;
+}
+div.imgartist{
+    padding: 9px;
+}
+div.contenido{
+    padding: 15px;
+}
+h1.she{
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 90px;
+    letter-spacing: 5px;
+    margin: 30px;
+}
+h4.she2, ol.toptracks, li.top, h3.biblioteca, h4.she3{
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-size: 22px;
+}
+ol.toptracks , li.top{
+    margin: 6px;
+}
+h3.biblioteca{
+    font-size: 45px;
+    margin: 15px;
+    text-indent: -2px;
+}
+h4.she3{
+margin: 8px;
+}
+a.halsi{
+    padding: 12px;
+    background-color: black ;
+    color: white;
+    font-size: 18px;
+    border-radius: 22px;
+}
+/*Detail.artist*/
+
+/*Detail album*/
+div.info{
+    padding: 15px;
+}
+h1.dom{
+    font-family:'Josefin Sans', sans-serif;
+    color: black;
+    text-align: left;
+    font-size: 80px;
+    letter-spacing: 3px;
+    margin: 30px;
+}
+ul.lista1, ul.lista2{
+    margin: 6px
+}
+
+/*Detail Genres*/
+
+.contenedor_detail_genres_albumes {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding: 15px; 
+}
+.albumes_detail_genres {
+    width: 20%;
+    align-items: center;
+}
+.contenedor_detail_genres_artistas {
+    display: flex;
+    flex-wrap:wrap;
+    padding: 15px;
+}
+.artistas_detail_genres {
+     text-align: center;
+    width: 20%;
+}
+h4, h5 {
+    font-family:'Josefin Sans', sans-serif;
+}
+h1.detail_genres{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    margin: 2.5%;
+    font-size: 50px;
+    padding: 15px;
+}
+.detail_genres_tp {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 80px;
+    padding: 30px;
+}
+.detail_genres {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+}
+body.detalle_genero {
+    background-image: linear-gradient(#6c6cff, #6b3636);
+
+}
+.albumes_detail_genres_image img {
+    border-radius: 5%;
+
+}
+.albumes_detail_genres_image h5 {
+    color: rgba(245, 245, 245, 0.795);
+}
+
+.artistas_detail_genres_image img {
+border-radius: 50%;
+}
+
+/*Página géneros*/
+.contenedor_generos{
+
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding: 15px;
+}
+
+.genres {
+
+    width: 25%;
+    text-align: center;
+    padding-top: 25px;
+}
+.genres img {
+    border-radius: 5%;
+}
+.genres h4 {  
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+body.generos {
+    background-image: linear-gradient(#6c6cff, #6b3636);
+}
+body.generos h1 { font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 70px;
+    padding: 30px;
+}
+
