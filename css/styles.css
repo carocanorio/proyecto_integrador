@@ -191,29 +191,20 @@ ul.lista1, ul.lista2{
 /*Detail Genres*/
 
 .contenedor_detail_genres_albumes {
-
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
-    padding: 15px;
-    
-  
+    padding: 15px; 
 }
-
 .albumes_detail_genres {
-
     width: 20%;
     align-items: center;
-
 }
-
 .contenedor_detail_genres_artistas {
-
     display: flex;
     flex-wrap:wrap;
     padding: 15px;
 }
-
 .artistas_detail_genres {
      text-align: center;
     width: 20%;
@@ -237,22 +228,18 @@ h1.detail_genres{
     font-size: 80px;
     padding: 30px;
 }
-
 .detail_genres {
     font-family:'Josefin Sans', sans-serif;
     color: white;
 }
-
 body.detalle_genero {
     background-image: linear-gradient(#6c6cff, #6b3636);
 
 }
-
 .albumes_detail_genres_image img {
     border-radius: 5%;
 
 }
-
 .albumes_detail_genres_image h5 {
     color: rgba(245, 245, 245, 0.795);
 }
@@ -261,16 +248,13 @@ body.detalle_genero {
 border-radius: 50%;
 }
 
-/*página géneros*/
-
+/*Página géneros*/
 .contenedor_generos{
 
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
     padding: 15px;
-    
-  
 }
 
 .genres {
@@ -278,32 +262,24 @@ border-radius: 50%;
     width: 25%;
     text-align: center;
     padding-top: 25px;
-
 }
-
 .genres img {
     border-radius: 5%;
 }
-
 .genres h4 {  
     font-family:'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
     font-size: 25px;
-
 }
-
-
 body.generos {
     background-image: linear-gradient(#6c6cff, #6b3636);
 }
-
 body.generos h1 { font-family:'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
     margin: 5%;
     font-size: 70px;
     padding: 30px;
-
 }
 
