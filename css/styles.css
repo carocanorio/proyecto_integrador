@@ -69,32 +69,98 @@ a.pre,a.pre2, a.pre3{
     text-align: right;
 }
 section.pres{
-    text-align: left;
+    text-align: center;
     text-indent: -50px;
 }
-h1.prese, h3.presen{
+h1.prese {
     font-family:'Josefin Sans', sans-serif;
     color: white;
-    text-align: left;
     font-size: 90px;
     letter-spacing: 10px;
     margin: 56px;
     align-items: flex-start;
 }
-h3.presen{
-    font-size: 20px;
+h1.presen{
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    letter-spacing: 10px;
+    margin: 56px;
+    align-items: flex-start;
     padding: 0px;
     line-height: 3px;
 }
-section.artistas{
+
+.track_home_conteiner {
     display: flex;
-    margin: 100px;
-    padding: 6px;
-    flex-direction: row;
+    flex-wrap:wrap;
+    padding: 20px; 
 }
-img.artist{
-    margin: 3px;
+.track_home {
+    width: 20%;
+    align-items: center;
 }
+.album_track_home_conteiner {
+    display: flex;
+    flex-wrap:wrap;
+    padding: 20px;
+}
+.album_track_home {
+    align-items: center;
+    width: 20%;
+}
+
+.contenedor_artistas_home {
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    padding: 20px;
+    
+}
+.artistas_home {
+    width: 20%;
+    text-align: center;
+    
+    
+}
+
+h3 {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+}
+
+.title_home {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin: 1%;
+}
+
+.track_home_img h4 {
+    color: rgba(245, 245, 245, 0.795);
+    font-size: 15px;
+}
+.album_track_home h4 {
+    color: rgba(245, 245, 245, 0.795);
+    font-size: 15px;
+}
+
+.track_home_img img { 
+    border-radius: 5%;
+
+}
+
+.album_home_img img {
+    border-radius: 5%;
+
+}
+ 
+
+.artistas_home_img img {
+border-radius: 50%;
+}
+
 /*Home*/
 
 /*Detail.track*/
