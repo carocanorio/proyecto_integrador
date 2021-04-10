@@ -77,3 +77,21 @@ ul li:last-child{
 .music-box{
     align-items: flex-start;
 }
+.music-box, fa-ellipsis-v{
+    margin-right: 10px;
+    margin-top: 22px;
+    font-weight: normal;
+    color: white;
+    cursor: pointer;
+
+}
+.music-name p{
+    font-size: 10px;
+    line-height: 1px;
+    letter-spacing: 0.5px;
+    color: white;
+    cursor: pointer;
+}
+.music-name{
+    align-self: center;
+}
