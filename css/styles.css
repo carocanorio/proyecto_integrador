@@ -365,3 +365,10 @@ body.generos h1 { font-family:'Josefin Sans', sans-serif;
     font-size: 70px;
     padding: 30px;
 }
+.titulo-playlist{
+    color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 100px;
+    padding: 30px;
+}
