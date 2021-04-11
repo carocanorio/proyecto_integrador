@@ -4,6 +4,12 @@
 }
 /*Selector Universal*/
 
+/*Generales*/
+li{
+    list-style: none;
+}
+/*Generales*/
+
 /*Header*/
 header{
     display: flex;
@@ -21,7 +27,6 @@ p.header, a{
     color: white;
     text-decoration: none;
 }
-
 form, input, button{
     font-family: 'Josefin Sans', sans-serif;
     align-self: center;
@@ -35,7 +40,30 @@ form, input, button{
 button{
     color: black;
 }
-
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-left: 20px;
+}
+a.pre{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: white;
+    text-decoration: none;
+    background-color: none;
+    margin: 10px;
+    letter-spacing: 3px;
+    text-align: right;
+}
+section.pres{
+    text-align: center;
+    text-indent: -50px;
+}
 /*Header*/
 
 /*Footer*/
@@ -55,23 +83,6 @@ a.foot{
 /*Footer*/
 
 /*Home*/
-body.presentacion{
- background-image: linear-gradient();
-}
-a.pre,a.pre2, a.pre3{
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: white;
-    text-decoration: none;
-    background-color: none;
-    margin: 10px;
-    letter-spacing: 3px;
-    text-align: right;
-}
-section.pres{
-    text-align: center;
-    text-indent: -50px;
-}
 h1.prese {
     font-family:'Josefin Sans', sans-serif;
     color: white;
@@ -113,14 +124,11 @@ h1.presen{
     display: flex;
     flex-wrap:wrap;
     width: 100%;
-    padding: 20px;
-    
+    padding: 20px;   
 }
 .artistas_home {
     width: 20%;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
 
 h3 {
@@ -156,11 +164,9 @@ h3 {
 
 }
  
-
 .artistas_home_img img {
 border-radius: 50%;
 }
-
 /*Home*/
 
 /*Detail.track*/
@@ -203,6 +209,7 @@ a.si2{
 h3.eyes{
     font-size: 45px;
 }
+
 /*Detail.track*/
 section.artist{
     flex-direction: row;
