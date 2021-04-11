@@ -72,7 +72,6 @@ ul li:last-child{
 .music-info{
     align-items: flex-end;
     display: flex;
-    border: 3px solid black;
 }
 .music-box{
     align-items: flex-start;
