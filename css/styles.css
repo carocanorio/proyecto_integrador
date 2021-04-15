@@ -461,5 +461,16 @@ img{
         display: flex;
         flex-wrap: wrap;
     }
+}
+
+/*Mobile*/
+@media (max-width: 935px){
+    .artist{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .detalle{
+        
+    }
 
 }
