@@ -173,9 +173,9 @@ border-radius: 50%;
 
 /*Detail.track*/
 section.track{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    display: flex;
     justify-content: flex-start;
     margin:0px;
 }
@@ -233,7 +233,7 @@ h1.she{
 }
 h4.she2, ol.toptracks, li.top, h3.biblioteca, h4.she3{
     font-family: 'Josefin Sans', sans-serif;
-    color: black;
+    color: b;
     font-size: 22px;
 }
 ol.toptracks , li.top{
@@ -446,6 +446,20 @@ img{
     background-color: #6c6cff;
     animation: width 10s infinite;
 }
+
+/*Media queries*/
 @keyframes width{
     100% {width:100%;}
+}
+
+/*Tablets*/
+@media (max-width: 1035px){
+    .detalle{
+        width: 38,64%;
+    }
+    .artist{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }
