@@ -147,7 +147,7 @@ h3 {
     margin: 1%;
 }
 
-.track_home_img h4 {
+.track_home h4 {
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
 }
@@ -156,17 +156,17 @@ h3 {
     font-size: 15px;
 }
 
-.track_home_img img { 
+.track_home img { 
     border-radius: 5%;
 
 }
 
-.album_home_img img {
+.album_home img {
     border-radius: 5%;
 
 }
  
-.artistas_home_img img {
+.artistas_home img {
 border-radius: 50%;
 }
 /*Home*/
@@ -469,8 +469,5 @@ img{
         display: flex;
         flex-wrap: wrap;
     }
-    .detalle{
-        
-    }
-
+    
 }
