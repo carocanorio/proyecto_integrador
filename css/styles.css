@@ -11,6 +11,10 @@ li{
 body{
     background-image: linear-gradient(#6c6cff, #6b3636);
 }
+
+h4, h5 {
+    font-family:'Josefin Sans', sans-serif;
+}
 /*Generales*/
 
 /*Header*/
@@ -147,11 +151,11 @@ h3 {
     margin: 1%;
 }
 
-.track_home h4 {
+.track_home h5 a {
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
 }
-.album_track_home h4 {
+.album_track_home  h5 a{
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
 }
@@ -276,37 +280,9 @@ ul.lista1{
 }
 
 /*Detail Genres*/
-.contenedor_detail_genres_albumes {
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    padding: 15px; 
-}
-.albumes_detail_genres {
-    width: 20%;
-    align-items: center;
-}
-.contenedor_detail_genres_artistas {
-    display: flex;
-    flex-wrap:wrap;
-    padding: 15px;
-}
-.artistas_detail_genres {
-     text-align: center;
-    width: 20%;
-}
-h4, h5 {
-    font-family:'Josefin Sans', sans-serif;
-}
-h1.detail_genres{
-    font-family:'Josefin Sans', sans-serif;
-    color: white;
-    text-align: left;
-    margin: 2.5%;
-    font-size: 50px;
-    padding: 15px;
-}
-.detail_genres_tp {
+
+
+.genres_titulo {
     font-family:'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
@@ -314,25 +290,7 @@ h1.detail_genres{
     font-size: 80px;
     padding: 30px;
 }
-.detail_genres {
-    font-family:'Josefin Sans', sans-serif;
-    color: white;
-}
-body.detalle_genero {
-    background-image: linear-gradient(#6c6cff, #6b3636);
 
-}
-.albumes_detail_genres_image img {
-    border-radius: 5%;
-
-}
-.albumes_detail_genres_image h5 {
-    color: rgba(245, 245, 245, 0.795);
-}
-
-.artistas_detail_genres_image img {
-border-radius: 50%;
-}
 
 /*Página géneros*/
 .contenedor_generos{
@@ -355,16 +313,20 @@ border-radius: 50%;
     text-align: center;
     font-size: 25px;
 }
-body.generos {
-    background-image: linear-gradient(#6c6cff, #6b3636);
-}
-body.generos h1 { font-family:'Josefin Sans', sans-serif;
+.genres_titulo1 {
+    font-family:'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
     margin: 5%;
-    font-size: 70px;
-    padding: 30px;
+    font-size: 65px;
+    padding: 20px;
 }
+
+/*Página géneros*/
+
+
+/*Página playlist*/
+
 .titulo-playlist{
     color: white;
     text-align: center;
@@ -446,6 +408,10 @@ img{
     background-color: #6c6cff;
     animation: width 10s infinite;
 }
+/*Página playlist*/
+
+
+
 
 /*Media queries*/
 @keyframes width{
