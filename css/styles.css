@@ -12,7 +12,7 @@ body{
     background-image: linear-gradient(#6c6cff, #6b3636);
 }
 
-h4, h5 {
+h4, h5, h1 {
     font-family:'Josefin Sans', sans-serif;
 }
 /*Generales*/
@@ -92,14 +92,12 @@ h1.prese {
     font-size: 90px;
     letter-spacing: 10px;
     margin: 56px;
-    align-items: flex-start;
 }
 h1.presen{
     font-family:'Josefin Sans', sans-serif;
     color: white;
     letter-spacing: 10px;
     margin: 56px;
-    align-items: flex-start;
     padding: 0px;
     line-height: 3px;
 }
@@ -418,8 +416,9 @@ img{
     100% {width:100%;}
 }
 
+
 /*Tablets*/
-@media (max-width: 1035px){
+@media (max-width: 768px){
     .detalle{
         width: 38,64%;
     }
@@ -427,13 +426,134 @@ img{
         display: flex;
         flex-wrap: wrap;
     }
+    
+    /*home*/
+  
+
+
 }
 
+
+
+
+
+
 /*Mobile*/
-@media (max-width: 935px){
+@media (max-width: 420px){
     .artist{
         display: flex;
         flex-wrap: wrap;
     }
+    
+    /*home*/
+    body.home {
+        width: 80vh;
+    }
+    h1.prese {
+        font-size: 80px;
+        padding-top: 15%;
+        margin: 0%;
+    }
+    h1.presen{
+        letter-spacing: 0px;
+        margin: 4%;
+        padding-top: 5%;
+        line-height: 0px;
+        width: 100%;
+    }
+        
+    
+    section.pres{
+        text-align: center;
+        text-indent: 0px;
+        padding-left: 5%;
+        width: 100%;
+        width: 80vh;
+        padding-block-end: 30%;
+    }
+
+    .title_home {
+        padding-left: 5%;
+        width: 100%;
+        width: 90vh;
+       
+    }
+    .track_home_conteiner{
+        align-items: center;
+        padding: 1%;
+        width: 100vh;
+       
+    }
+    
+    .track_home {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    }
+    
+    .album_track_home_conteiner {
+        align-items: center;
+        padding: 1%;
+        width: 100vh;
+        
+    
+    }
+    .album_track_home {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    } 
+
+    .contenedor_artistas_home {
+        align-items: center;
+        padding: 1%;
+        width: 100vh;
+    
+    
+    }
+    .artistas_home  {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+        
+    }
+    
+   
+
+    /*detalle de género*/
+    .genres_titulo {
+        font-size: 60px;
+        margin: 10%;
+        align-items: flex-start;
+        text-align: center;
+        width: 80vh;
+        padding-block-end: 20%;
+       
+    }
+
+    /*géneros*/
+
+    .genres_titulo1{
+        font-size: 30px;
+        margin: 10%;
+        text-align: center;
+        align-items: center;
+        width: 90vh;
+    }
+    .contenedor_generos { 
+        align-items: center;
+        padding: 1%;
+        width: 100vh;
+    }
+    .genres {
+        width: 45%;
+        margin: 2.5%;
+        text-align: center;
+    }
+        
+    
+
+
+
     
 }
