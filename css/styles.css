@@ -28,7 +28,7 @@ header{
 form{
     justify-content: left;
 }
-p.header, a{
+.header, a{
     letter-spacing: 2px;
     word-spacing: 2px;
     color: white;
@@ -57,7 +57,7 @@ button{
 .logo{
     margin-left: 20px;
 }
-a.pre{
+.pre{
     letter-spacing: 2px;
     word-spacing: 2px;
     color: white;
@@ -78,22 +78,27 @@ footer{
     align-items: flex-end;
     padding-top: 80px;
     color: white;
+    word-spacing: 2px;
 }
-a.foot{
+.foot{
     color:white;
     text-decoration: none;
+    margin-left: 1%;
+}
+i{
+    margin: 4px;
 }
 /*Footer*/
 
 /*Home*/
-h1.prese {
+.prese {
     font-family:'Josefin Sans', sans-serif;
     color: white;
     font-size: 90px;
     letter-spacing: 10px;
     margin: 56px;
 }
-h1.presen{
+.presen{
     font-family:'Josefin Sans', sans-serif;
     color: white;
     letter-spacing: 10px;
@@ -101,7 +106,7 @@ h1.presen{
     padding: 0px;
     line-height: 3px;
 }
-section.pres{
+.pres{
     text-align: center;
     text-indent: -50px;
 }
@@ -123,7 +128,6 @@ section.pres{
     align-items: center;
     width: 20%;
 }
-
 .contenedor_artistas_home {
     display: flex;
     flex-wrap:wrap;
@@ -134,12 +138,10 @@ section.pres{
     width: 20%;
     text-align: center;   
 }
-
 h3 {
     font-family:'Josefin Sans', sans-serif;
     color: white;
 }
-
 .title_home {
     font-family:'Josefin Sans', sans-serif;
     color: white;
@@ -148,7 +150,6 @@ h3 {
     padding-bottom: 20px;
     margin: 1%;
 }
-
 .track_home h5 a {
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
@@ -157,99 +158,94 @@ h3 {
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
 }
-
 .track_home img { 
     border-radius: 5%;
-
 }
-
 .album_home img {
     border-radius: 5%;
-
 }
- 
 .artistas_home img {
 border-radius: 50%;
 }
 /*Home*/
 
 /*Detail.track*/
-section.track{
+.track{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin:0px;
 }
-div.img{
+.img{
     padding: 9px;
 }
-div.sey{
+.sey{
     padding: 15px;
 }
-h1.song{
+.song{
     font-family:'Josefin Sans', sans-serif;
-    color: black;
+    color: white;
     text-align: left;
     font-size: 90px;
     letter-spacing: 5px;
     margin: 30px;
 }
-h3.eyes, h4.halsey, a.hal, a.si2{
+.eyes, .halsey, .hal, .si2, .lista2{
     font-family: 'Josefin Sans', sans-serif;
-    color: black;
+    color: white;
     font-size: 22px;
 }
-a.si2{
+.si2{
     padding: 12px;
     background-color: black ;
     color: white;
     font-size: 18px;
     border-radius: 22px;
 }
-h3.eyes{
+.eyes{
     font-size: 45px;
 }
 
 /*Detail.track*/
-section.artist{
+.artist{
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
     justify-content: flex-start;
     margin:0px;
 }
-div.imgartist{
+.imgartist{
     padding: 9px;
 }
-div.contenido{
+.contenido{
     padding: 15px;
 }
-h1.she{
+.she{
     font-family:'Josefin Sans', sans-serif;
-    color: black;
+    color: white;
     text-align: left;
     font-size: 90px;
     letter-spacing: 5px;
     margin: 30px;
 }
-h4.she2, ol.toptracks, li.top, h3.biblioteca, h4.she3{
+.she2, .toptracks, .top, .biblioteca, .she3{
     font-family: 'Josefin Sans', sans-serif;
-    color: b;
+    color: white;
     font-size: 22px;
 }
-ol.toptracks , li.top{
+.toptracks , .top{
     margin: 6px;
 }
-h3.biblioteca{
+.biblioteca{
     font-size: 45px;
     margin: 15px;
     text-indent: -2px;
 }
-h4.she3{
+.she3{
 margin: 8px;
 }
-a.halsi{
+.halsi{
     padding: 12px;
     background-color: black ;
     color: white;
@@ -259,27 +255,26 @@ a.halsi{
 /*Detail.artist*/
 
 /*Detail album*/
-div.info{
+.info{
     padding: 15px;
 }
-h1.dom{
+.dom{
     font-family:'Josefin Sans', sans-serif;
-    color: black;
+    color: white;
     text-align: left;
     font-size: 80px;
     letter-spacing: 3px;
     margin: 30px;
 }
-ul.lista1{
+.lista1{
     margin: 6px
 }
 .top{
     list-style: upper-roman;
 }
+/*Detail album*/
 
 /*Detail Genres*/
-
-
 .genres_titulo {
     font-family:'Josefin Sans', sans-serif;
     color: white;
@@ -288,7 +283,6 @@ ul.lista1{
     font-size: 80px;
     padding: 30px;
 }
-
 
 /*Página géneros*/
 .contenedor_generos{
@@ -319,12 +313,10 @@ ul.lista1{
     font-size: 65px;
     padding: 20px;
 }
-
 /*Página géneros*/
 
 
 /*Página playlist*/
-
 .titulo-playlist{
     color: white;
     text-align: center;
@@ -409,43 +401,57 @@ img{
 /*Página playlist*/
 
 
-
-
 /*Media queries*/
 @keyframes width{
     100% {width:100%;}
 }
 
-
 /*Tablets*/
 @media (max-width: 768px){
-    .detalle{
-        width: 38,64%;
+    /*Detail Track*/
+    .eyesclosed{
+        height: 10vh;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+    .track{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 50vh;  
+    }
+    .sey{
+        width: 40vw;
+    }
+
+    /*Detail Album*/
+    .dom{
+        width: 45vw;
     }
     .artist{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        justify-content: flex-start; 
     }
-    
-    /*home*/
-  
-
-
+    .info{
+        width: 40vw;
+    }
+    .lista2{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50vw; 
+    }
+   
 }
-
-
-
-
-
 
 /*Mobile*/
 @media (max-width: 420px){
-    .artist{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    /*home*/
+
+
+
+    /*Home*/
     body.home {
         width: 80vh;
     }
@@ -462,7 +468,6 @@ img{
         width: 100%;
     }
         
-    
     section.pres{
         text-align: center;
         text-indent: 0px;
@@ -550,10 +555,7 @@ img{
         margin: 2.5%;
         text-align: center;
     }
-        
-    
-
-
-
     
 }
+
+/*Media Queries*/
