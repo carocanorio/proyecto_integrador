@@ -547,6 +547,12 @@ img{
         text-align: center;
         
     }
+    .last-item {
+        width: 100%;
+        margin: 2.5%;
+        text-align: center;
+
+    }
     
    
 
@@ -573,11 +579,11 @@ img{
     .contenedor_generos { 
         align-items: center;
         padding: 1%;
-        width: 100vh;
     }
     .genres {
         width: 45%;
         margin: 2.5%;
+        
         text-align: center;
     }
     
