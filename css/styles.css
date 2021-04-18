@@ -493,9 +493,17 @@ img{
     }
 
     /*menu*/
-    .menu {
-        margin:0;
-        font-size: 20px;
+    
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 12px;
+    }
+    
+    .menu { 
+        font-size: 15px;
+        margin: 6px;
     }
 
 
@@ -550,7 +558,24 @@ img{
 @media (max-width: 420px){
 
     /*Home*/
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 10px;
+        
+    }
     
+    .menu { 
+        font-size: 15px;
+        margin: 4px;
+    }
+    form {
+        padding-left: 25%;
+    }
+    .logo {
+        display: none;
+    }
 
     .prese {
         font-size: 40px;
@@ -594,7 +619,6 @@ img{
         margin: 2.5%;
         text-align: center;
     } 
-
     .contenedor_artistas_home {
         align-items: center;
         padding: 1%;
