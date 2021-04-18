@@ -136,7 +136,7 @@ i{
 }
 .artistas_home {
     width: 20%;
-    text-align: center;   
+    text-align: center; 
 }
 h3 {
     font-family:'Josefin Sans', sans-serif;
@@ -399,6 +399,31 @@ img{
     animation: width 10s infinite;
 }
 /*Página playlist*/
+
+/*Search Results*/
+.search{
+    color: white;
+    text-align: left;
+    margin: 5%;
+    font-size: 80px;
+}
+.result1{
+    margin: 1%;
+    font-size: 40px;
+}
+.result0{
+    margin: 3%;
+    font-size: 20px;
+    color:white;
+}
+.busqueda1{
+    margin-top: 5%;
+}
+
+
+
+
+
 
 
 /*Media queries*/
