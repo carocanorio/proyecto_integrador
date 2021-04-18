@@ -4,39 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../proyecto_integrador/css/styles.css">
     <title>Resultados de búsqueda</title>
 </head>
 <body>
 
-    <section>
-        <h1 class="search">Resultado de búsqueda.</h1>
-    </section>
+    <header>
+        <form action="search-results.html" method="GET">
+            <input type="search" name="Buscar" placeholder="Buscar en Hurrian">
+            <button type="submit">Buscar</button>
+        </form>
+        <ul class="menu">
+            <li> <a class="pre" href="index.html">  Home  </a></li>
+            <li><a class="pre"  href="genres.html">  Géneros  </a></li>
+            <li><a  class="pre" href="playlist.html">  Mi playlist  </a></li>
+            <li class="logo"><img width="40px" src="../proyecto_integrador/img/logo.hurrian.blanco.png" alt="Logo"></li>
+        </ul>
+    </header>
 
     <section>
-        <h3 class="result1">"Dua Lipa"</h3>
-        <h4 class="result0"> <a class="result2" href="detail_artist.html"> Ver: Dua Lipa</a></h4>
-        <h4 class="result0"> <a class="result2" href="detail_album.html"> Album: Future Nostalgia</a></h4>
-        <h4 class="result0"> <a class="result2" href="detail-genres.html"> Ver: Género Pop</a></h4>
+        <h1 class="search">Resultados de búsqueda.</h1>
     </section>
 
-    <section>
-        <h3 class="result1">"Musica pop"</h3>
-        <h4 class="result0"> <a class="result2" href="detail-genres.html"> Ver: Género Pop</a></h4>
-        <h4 class="result0"> <a class="result2" href="genres.html"> Ver: Géneros</a></h4>
-    </section>
+    <h3 class="result1">"Dua Lipa"</h3>
 
-    <section>
-        <h3 class="result1">"Hopeless Fountain Kingdom"</h3>
-        <h4 class="result0"> <a class="result2" href="detail-genres.html"> Ver: Genero Pop</a></h4>
-        <h4 class="result0"> <a class="result2" href="detail_album.html">Album: Hopeless Fountain Kingdom</a></h4>
-        <h4 class="result0"> <a class="result2" href="detail_artist.html">Artista: Halsey</a></h4>
-        <h4 class="result0"> <a class="result2" href="detail_track.html">Cancion: Eyes Closed</a></h4>
-    </section>
+    <article class="contenedor_artistas_home">
 
-    <section>
-        <h3 class="result1">"Tutorial de maquillaje"</h3>
+        <section class="artistas_home">
+            <a href="detail_artist.html"> <img src="../proyecto_integrador/img/detalle.genero.artista.dua.jpg" alt="Dua Lipa"> </a>
+            <h4 class="result0"> <a class="result2" href="detail_artist.html"> Ver: Dua Lipa</a></h4>
+        </section>
+
+        <section class="artistas_home">
+            <a href="detail_album.html"> <img src="../proyecto_integrador/img/detalle.genero.dualipa.jpg" alt="Dua Lipa"> </a>
+            <h4 class="result0"> <a class="result2" href="detail_album.html"> Album: Future Nostalgia</a></h4>
+        </section>
+
+        <section class="artistas_home">
+            <a href="detail-genres.html"> <img src="../proyecto_integrador/img/fondo.generos.pop.jpg" alt="Pop"> </a>
+            <h4 class="result0"> <a class="result2" href="detail-genres.html"> Ver: Género Pop</a></h4>
+        </section>
+
+    </article>
+
+    <h3 class="result1">"Rock Nacional"</h3>
+
+    <article class="contenedor_artistas_home">
+
+        <section class="artistas_home">
+            <a href="detail-genres.html"> <img src="../proyecto_integrador/img/fondo.generos.rock.nacional.jpg" alt="Rock Nacional"> </a>
+            <h4 class="result0"> <a class="result2" href="detail-genres.html"> Ver: Género Rock Nacional</a></h4>
+        </section>
+
+    </article>
+
+    <h3 class="result1">"Hopeless Fountain Kingdom"</h3>
+
+    <article class="contenedor_artistas_home">
+
+        <section class="artistas_home">
+            <a href="detail-genres.html"> <img src="../proyecto_integrador/img/fondo.generos.pop.jpg" alt="Hopeless Fountain Kingdom"> </a>
+            <h4 class="result0"> <a class="result2" href="detail_album.html">Album: Hopeless Fountain Kingdom</a></h4>
+        </section>
+
+        <section class="artistas_home">
+            <a href="detail_artist.html"> <img src="../proyecto_integrador/img/detalle.genero.artista.helsey.jpg" width="219px" alt="Halsey"> </a>
+            <h4 class="result0"> <a class="result2" href="detail_artist.html">Artista: Halsey</a></h4>
+        </section>
+
+        <section class="artistas_home">
+            <a href="detail_track.html"> <img src="../proyecto_integrador/img/eyesclosedcancion.jpg" width="219px" alt="Eyes Closed"> </a>
+            <h4 class="result0"> <a class="result2" href="detail_track.html">Escuchar: Eyes Closed</a></h4>
+        </section>
+
+        <section class="artistas_home">
+            <a href="detail-genres.html"> <img src="../proyecto_integrador/img/fondo.generos.pop.jpg" alt="Pop"> </a>
+            <h4 class="result0"> <a class="result2" href="detail-genres.html"> Ver: Género Pop</a></h4>
+        </section>
+
+    </article>
+
+    <section class="busqueda1">
+        <h3 class="result1">"Cover Dua Lipa"</h3>
         <h4 class="result0">Lo sentimos, no se han encontrado resultados para tu búsqueda.</h4>
     </section>
+
+
+    <footer>Copyright <i class="far fa-copyright"></i> 2021 HURRIAN | Todos los derechos reservados |
+        Contacto:  <a class="foot" href="mailto:ccanoriohellwing@udesa.edu.ar">   Carolina Canorio, </a> <a class="foot" href="mailto:fmainardi@udesa.edu.ar">Franco Mainardi, </a><a class="foot" href="mailto:abuccierorodriguez@udesa.edu.ar">Quillén Bucciero</a>
+    </footer>
 
 </body>
 </html>
