@@ -26,8 +26,7 @@ header{
     width: 100%;
 }
 form{ 
-
-    justify-content: left;
+    align-items: flex-start;
 }
 .header, a{
     letter-spacing: 2px;
@@ -54,6 +53,7 @@ button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0%;
 }
 .logo{
     margin-left: 20px;
