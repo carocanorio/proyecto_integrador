@@ -26,7 +26,7 @@ header{
     width: 100%;
 }
 form{
-    justify-content: left;
+    text-align: left;
 }
 .header, a{
     letter-spacing: 2px;
