@@ -56,6 +56,7 @@ button{
 }
 .logo{
     margin-left: 20px;
+    margin-right: 10px;
 }
 .pre{
     letter-spacing: 2px;
@@ -96,47 +97,18 @@ i{
     color: white;
     font-size: 90px;
     letter-spacing: 10px;
-    margin: 56px;
 }
 .presen{
     font-family:'Josefin Sans', sans-serif;
     color: white;
-    letter-spacing: 10px;
-    margin: 56px;
     padding: 0px;
     line-height: 3px;
+    margin: 5%;
+    letter-spacing: 5px;
+    
 }
 .pres{
     text-align: center;
-    text-indent: -50px;
-}
-.track_home_conteiner {
-    display: flex;
-    flex-wrap:wrap;
-    padding: 20px; 
-}
-.track_home {
-    width: 20%;
-    align-items: center;
-}
-.album_track_home_conteiner {
-    display: flex;
-    flex-wrap:wrap;
-    padding: 20px;
-}
-.album_track_home {
-    align-items: center;
-    width: 20%;
-}
-.contenedor_artistas_home {
-    display: flex;
-    flex-wrap:wrap;
-    width: 100%;
-    padding: 20px;   
-}
-.artistas_home {
-    width: 20%;
-    text-align: center; 
 }
 h3 {
     font-family:'Josefin Sans', sans-serif;
@@ -150,22 +122,55 @@ h3 {
     padding-bottom: 20px;
     margin: 1%;
 }
+.track_home_conteiner {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+}
+.track_home {
+    width: 18%;
+    padding: 2%; 
+}
+.track_home img { 
+    border-radius: 5%;
+    width: 100%;
+}
 .track_home h5 a {
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
+}
+.album_track_home_conteiner {
+    display: flex;
+    flex-wrap:wrap;
+    
+    justify-content: space-around;
+}
+.album_track_home {
+    width: 18%;
+    padding: 2%; 
+}
+.album_track_home img {
+    border-radius: 5%;
+    width: 100%;
 }
 .album_track_home  h5 a{
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
 }
-.track_home img { 
-    border-radius: 5%;
+.contenedor_artistas_home {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;  
 }
-.album_home img {
-    border-radius: 5%;
+.artistas_home {
+    width: 18%;
+    text-align: center; 
+    padding: 2%; 
 }
 .artistas_home img {
-border-radius: 50%;
+    width: 100%;
+    border-radius: 50%;
 }
 /*Home*/
 
@@ -243,7 +248,7 @@ border-radius: 50%;
     text-indent: -2px;
 }
 .she3{
-margin: 8px;
+    margin: 8px;
 }
 .halsi{
     padding: 12px;
@@ -275,7 +280,7 @@ margin: 8px;
 /*Detail album*/
 
 /*Detail Genres*/
-.genres_titulo {
+.genres-detail-titulo {
     font-family:'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
@@ -288,16 +293,17 @@ margin: 8px;
 .contenedor_generos{
     display: flex;
     flex-wrap:wrap;
-    justify-content: center;
-    padding: 15px;
+    justify-content: space-around;
 }
 .genres {
-    width: 25%;
+    width: 23%;
     text-align: center;
-    padding-top: 25px;
+    margin-top: 25px;
+    padding: 3%;
 }
 .genres img {
     border-radius: 5%;
+    width: 100%;
 }
 .genres h4 {  
     font-family:'Josefin Sans', sans-serif;
@@ -468,51 +474,134 @@ img{
         flex-wrap: wrap;
         width: 50vw; 
     }
-   
+
+    /*géneros*/
+    .genres {
+        width: 30%;
+        margin-top: 0;
+    }
+    .genres h4 {
+        font-size: 20px;
+    }
+    .genres_titulo1 {
+        font-size: 50px;
+    }
+
+    /*detalle de genero*/
+    .genres-detail-titulo {
+        font-size: 50px;
+    }
+
+    /*menu*/
+    
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 12px;
+    }
+    
+    .menu { 
+        font-size: 15px;
+        margin: 6px;
+    }
+
+
+    /*home*/
+    .prese {
+        font-size: 50px;
+        padding-top: 15%;
+    }
+    .presen{
+        font-size: 25px;
+    }
+    .pres {
+        margin-block-end: 10%;
+    } 
+
+    .title_home {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .track_home {
+        width: 30%;
+        text-align: center;
+    }
+    .track_home h5 a {
+        font-size: 10px;
+        
+    }
+    .track_home h3 a {
+        font-size: 15px;
+        
+    }
+    .album_track_home {
+        width: 30%; 
+        text-align: center;
+    } 
+    .album_track_home h5 a{
+        font-size: 12.5px;
+    }
+    .album_track_home h3 a {
+        font-size: 15px;
+    }
+
+    .artistas_home  {
+        width: 30%;
+        text-align: center;
+    }
+    
 }
 
 /*Mobile*/
 @media (max-width: 420px){
 
-
-
     /*Home*/
-    body.home {
-        width: 80vh;
+    form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 10px;
+        
     }
-    h1.prese {
-        font-size: 80px;
+    
+    .menu { 
+        font-size: 15px;
+        margin: 4px;
+    }
+    form {
+        padding-left: 25%;
+    }
+    .logo {
+        display: none;
+    }
+
+    .prese {
+        font-size: 40px;
         padding-top: 15%;
-        margin: 0%;
+        margin: 0;
+        letter-spacing: auto;
+        margin-block-end: 20px;
     }
-    h1.presen{
-        letter-spacing: 0px;
-        margin: 4%;
-        padding-top: 5%;
-        line-height: 0px;
-        width: 100%;
+    .presen{
+        font-size: 15px;
+        margin: 0;
+
     }
         
-    section.pres{
+    .pres{
         text-align: center;
-        text-indent: 0px;
         padding-left: 5%;
-        width: 100%;
-        width: 80vh;
-        padding-block-end: 30%;
+        padding-block-end: 10%;
     }
 
     .title_home {
-        padding-left: 5%;
-        width: 100%;
-        width: 90vh;
-       
+        text-align: center;
     }
     .track_home_conteiner{
         align-items: center;
         padding: 1%;
-        width: 100vh;
-       
     }
     
     .track_home {
@@ -524,37 +613,22 @@ img{
     .album_track_home_conteiner {
         align-items: center;
         padding: 1%;
-        width: 100vh;
-        
-    
     }
     .album_track_home {
         width: 45%;
         margin: 2.5%;
         text-align: center;
     } 
-
     .contenedor_artistas_home {
         align-items: center;
         padding: 1%;
-        width: 100vh;
-    
-    
     }
     .artistas_home  {
         width: 45%;
         margin: 2.5%;
         text-align: center;
-        
     }
-    .last-item {
-        width: 100%;
-        margin: 2.5%;
-        text-align: center;
 
-    }
-    
-   
 
     /*detalle de género*/
     .genres_titulo {
@@ -562,9 +636,7 @@ img{
         margin: 10%;
         align-items: flex-start;
         text-align: center;
-        width: 80vh;
         padding-block-end: 20%;
-       
     }
 
     /*géneros*/
@@ -574,7 +646,6 @@ img{
         margin: 10%;
         text-align: center;
         align-items: center;
-        width: 90vh;
     }
     .contenedor_generos { 
         align-items: center;
@@ -582,9 +653,8 @@ img{
     }
     .genres {
         width: 45%;
-        margin: 2.5%;
-        
         text-align: center;
+        margin-top: 0;
     }
     
 }
