@@ -25,14 +25,8 @@ header{
     justify-content: space-between;
     width: 100%;
 }
-<<<<<<< HEAD
-form{ 
-
-    justify-content: left;
-=======
 form{
     text-align: left;
->>>>>>> 72e9a6e6d963bc848465ea58e7b446fead3f19dc
 }
 .header, a{
     letter-spacing: 2px;
