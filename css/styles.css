@@ -2,7 +2,7 @@
 *{
     box-sizing: border-box;
 }
-/*Selector Universal*/
+/*Selector Universal css final*/
 
 /*Generales*/
 li{
@@ -15,7 +15,7 @@ body{
 h4, h5, h1 {
     font-family:'Josefin Sans', sans-serif;
 }
-/*Generales*/
+/*Generales css final*/
 
 /*Header*/
 header{
@@ -92,6 +92,7 @@ p{
     display: flex;
     flex-direction: row;
 }
+/*Footer css final*/
 
 /*Home*/
 .prese {
@@ -106,8 +107,7 @@ p{
     padding: 0px;
     line-height: 3px;
     margin: 5%;
-    letter-spacing: 5px;
-    
+    letter-spacing: 5px;    
 }
 .pres{
     text-align: center;
@@ -213,8 +213,9 @@ h3 {
 .eyes{
     font-size: 45px;
 }
+/*Detail.track css final*/
 
-/*Detail.track*/
+/*Detail.artist*/
 .artist{
     flex-direction: row;
     flex-wrap: wrap;
@@ -259,7 +260,7 @@ h3 {
     font-size: 18px;
     border-radius: 22px;
 }
-/*Detail.artist*/
+/*Detail.artist css final*/
 
 /*Detail album*/
 .info{
@@ -279,7 +280,7 @@ h3 {
 .top{
     list-style: upper-roman;
 }
-/*Detail album*/
+/*Detail album css final*/
 
 /*Detail Genres*/
 .genres-detail-titulo {
@@ -290,6 +291,7 @@ h3 {
     font-size: 80px;
     padding: 30px;
 }
+/*Detail Genres css final*/
 
 /*Página géneros*/
 .contenedor_generos{
@@ -406,7 +408,7 @@ img{
     background-color: #6c6cff;
     animation: width 10s infinite;
 }
-/*Página playlist*/
+/*Página playlist css final*/
 
 /*Search Results*/
 .search{
@@ -427,7 +429,7 @@ img{
 .busqueda1{
     margin-top: 5%;
 }
-/*Search Results*/
+/*Search Results css final*/
 
 
 
@@ -513,12 +515,10 @@ img{
     .pres {
         margin-block-end: 10%;
     } 
-
     .title_home {
         font-size: 30px;
         text-align: center;
-    }
-    
+    }   
     .track_home {
         width: 30%;
         text-align: center;
@@ -561,7 +561,6 @@ img{
     .result0{
         font-size: 10px;
     }
-
     .result1{
         font-size: 20px;
     }
@@ -640,7 +639,6 @@ img{
         text-align: center;
     }
 
-
     /*detalle de género*/
     .genres_titulo {
         font-size: 60px;
@@ -651,7 +649,6 @@ img{
     }
 
     /*géneros*/
-
     .genres_titulo1{
         font-size: 30px;
         margin: 10%;
