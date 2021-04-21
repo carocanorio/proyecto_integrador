@@ -2,7 +2,7 @@
 *{
     box-sizing: border-box;
 }
-/*Selector Universal css final*/
+
 
 /*Generales*/
 li{
@@ -15,7 +15,7 @@ body{
 h4, h5, h1 {
     font-family:'Josefin Sans', sans-serif;
 }
-/*Generales css final*/
+
 
 /*Header*/
 header{
@@ -69,7 +69,7 @@ button{
     letter-spacing: 3px;
     text-align: right;
 }
-/*Header css final*/
+
 
 /*Footer*/
 footer{
@@ -92,7 +92,7 @@ p{
     display: flex;
     flex-direction: row;
 }
-/*Footer css final*/
+
 
 /*Home*/
 .prese {
@@ -174,7 +174,7 @@ h3 {
     width: 100%;
     border-radius: 50%;
 }
-/*Home css final*/
+
 
 /*Detail.track*/
 .track{
@@ -213,7 +213,7 @@ h3 {
 .eyes{
     font-size: 45px;
 }
-/*Detail.track css final*/
+
 
 /*Detail.artist*/
 .artist{
@@ -260,7 +260,7 @@ h3 {
     font-size: 18px;
     border-radius: 22px;
 }
-/*Detail.artist css final*/
+
 
 /*Detail album*/
 .info{
@@ -280,7 +280,7 @@ h3 {
 .top{
     list-style: upper-roman;
 }
-/*Detail album css final*/
+
 
 /*Detail Genres*/
 .genres-detail-titulo {
@@ -291,7 +291,7 @@ h3 {
     font-size: 80px;
     padding: 30px;
 }
-/*Detail Genres css final*/
+
 
 /*Página géneros*/
 .contenedor_generos{
@@ -323,7 +323,6 @@ h3 {
     font-size: 65px;
     padding: 20px;
 }
-/*Página géneros css final*/
 
 
 /*Página playlist*/
@@ -408,7 +407,7 @@ img{
     background-color: #6c6cff;
     animation: width 10s infinite;
 }
-/*Página playlist css final*/
+
 
 /*Search Results*/
 .search{
@@ -429,10 +428,6 @@ img{
 .busqueda1{
     margin-top: 5%;
 }
-/*Search Results css final*/
-
-
-
 
 
 
@@ -443,6 +438,7 @@ img{
 
 /*Tablets*/
 @media (max-width: 768px){
+
     /*Detail Track*/
     .eyesclosed{
         height: 10vh;
@@ -503,7 +499,6 @@ img{
         margin: 6px;
     }
 
-
     /*home*/
     .prese {
         font-size: 50px;
@@ -549,6 +544,7 @@ img{
     
 }
 
+
 /*Mobile*/
 @media (max-width: 420px){
 
@@ -573,7 +569,6 @@ img{
         font-size: 10px;
         
     }
-    
     .menu { 
         font-size: 15px;
         margin: 4px;
@@ -586,7 +581,6 @@ img{
     .logo {
         display: none;
     }
-
     .prese {
         font-size: 40px;
         padding-top: 15%;
@@ -597,29 +591,24 @@ img{
     .presen{
         font-size: 15px;
         margin: 0;
-
-    }
-        
+    }       
     .pres{
         text-align: center;
         padding-left: 5%;
         padding-block-end: 10%;
     }
-
     .title_home {
         text-align: center;
     }
     .track_home_conteiner{
         align-items: center;
         padding: 1%;
-    }
-    
+    }   
     .track_home {
         width: 45%;
         margin: 2.5%;
         text-align: center;
-    }
-    
+    } 
     .album_track_home_conteiner {
         align-items: center;
         padding: 1%;
@@ -675,4 +664,5 @@ img{
     .foot {
         font-size: 3px;
     }
+
 }
