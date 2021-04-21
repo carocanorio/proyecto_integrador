@@ -339,6 +339,11 @@ h3 {
 img{
     border-radius: 5%;
 }
+.music-name {
+    font-family:'Josefin Sans', sans-serif;
+    color: white;
+    text-align:start;
+}
 .play-img img{
     width: 70px;
     height: 68px;
@@ -503,6 +508,7 @@ img{
     }
     .presen{
         font-size: 25px;
+       letter-spacing: 0px; 
     }
     .pres {
         margin-block-end: 10%;
@@ -641,6 +647,7 @@ img{
     .presen{
         font-size: 15px;
         margin: 0;
+        letter-spacing: 0px;
     }       
     .pres{
         text-align: center;
