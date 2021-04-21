@@ -234,12 +234,12 @@ h3 {
     letter-spacing: 5px;
     margin: 30px;
 }
-.she2, .toptracks, .top, .biblioteca, .she3{
+.she2, .top, .biblioteca, .she3{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     font-size: 22px;
 }
-.toptracks , .top{
+.top{
     margin: 6px;
 }
 .biblioteca{
@@ -467,6 +467,11 @@ img{
         width: 40vw;
     }
 
+    /*Detail artist*/
+    .galeria1{
+    width: 242px;
+    }
+
     /*géneros*/
     .genres {
         width: 30%;
@@ -575,8 +580,8 @@ img{
         justify-content: flex-start;
     }
     .si2{
+        padding:6px ;
         font-size: 9px;
-        padding: 9px;
     }
 
     /*Detail album*/
@@ -594,9 +599,28 @@ img{
         width: 100vw;
     }
 
-
-    
-
+    /*Detail artist*/
+    .she{
+        font-size: 45px;
+    }
+    .artist{
+        display: flex;
+        margin-top: 5%;
+    }
+    .she2, .top, .she3{
+        font-size: 11px;
+    }
+    .biblioteca{
+        font-size: 22.5px;
+    }
+    .halsi{
+        font-size: 9px;
+        margin-top: 3%;
+        padding: 6px;
+    }
+    .galeria1{
+        width: 125px;
+    }
 
     /*Search Results*/
     .search{
