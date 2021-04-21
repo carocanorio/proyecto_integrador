@@ -39,7 +39,7 @@ input, button{
     align-self: center;
     color: white;
     margin: 1px;
-    margin-top: 0px;
+    margin-top: 12px;
     padding: 9px;
     border: 0px white solid;
     border-radius: 50px;
@@ -87,20 +87,9 @@ footer{
 i{
     margin: 4px;
 }
-p{
-    display: flex;
-    flex-direction: row;
-}
 
-.arriba{
-    border-radius: 22px;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 15px;
-    width: 30px;
-    font-family: 'Josefin Sans', sans-serif;
-}
+
+
 
 /*Home*/
 .prese {
@@ -181,6 +170,25 @@ h3 {
 .artistas_home img {
     width: 100%;
     border-radius: 50%;
+}
+.arriba-conteiner {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 6%;
+    margin-top: 6%;
+
+}
+.arriba{
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.836);
+    width: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+.arriba a {
+    color: rgb(70, 67, 67);
+    font-size: 25px;
+   
 }
 
 
