@@ -198,7 +198,7 @@ h3 {
     letter-spacing: 5px;
     margin: 30px;
 }
-.eyes, .halsey, .hal, .si2{
+.halsey, .hal, .si2{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     font-size: 22px;
@@ -209,9 +209,6 @@ h3 {
     color: white;
     font-size: 18px;
     border-radius: 22px;
-}
-.eyes{
-    font-size: 45px;
 }
 
 
@@ -548,6 +545,59 @@ img{
 /*Mobile*/
 @media (max-width: 420px){
 
+    /*Detail track*/
+    .song{
+        font-size: 45px ;
+        display: flex;
+    }
+    .eyesclosed{
+        margin-top: 10%;
+        margin-bottom: 5% ;
+    }
+    .img{
+        width: 50%;
+    }
+    .detalle{
+        width: 50vw;
+        margin-top: 5%;
+    }
+    .track{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 300px;
+    }
+    .sey{
+        margin-left: 15px;
+    }
+    .hal, .halsey, .si2{
+        font-size: 11px;
+        justify-content: flex-start;
+    }
+    .si2{
+        font-size: 9px;
+        padding: 9px;
+    }
+
+    /*Detail album*/
+    .dom{
+        font-size: 45px ;
+        display: flex;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 4%;
+    }
+    .top{
+        font-size: 11px;
+    }
+    .info{
+        width: 100vw;
+    }
+
+
+    
+
+
     /*Search Results*/
     .search{
         font-size: 40px;
@@ -656,13 +706,13 @@ img{
     
     /* footer*/ 
     footer p {
-        font-size: 3px;
+        font-size: 6.5px;
     }
     footer i {
-        font-size: 3px;
+        font-size: 6.5px;
     }
     .foot {
-        font-size: 3px;
+        font-size: 6.5px;
     }
 
 }
