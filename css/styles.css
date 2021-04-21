@@ -543,12 +543,10 @@ img{
         text-align: center;
     }
     .track_home h5 a {
-        font-size: 10px;
-        
+        font-size: 10px; 
     }
     .track_home h3 a {
         font-size: 15px;
-        
     }
     .album_track_home {
         width: 30%; 
@@ -565,7 +563,17 @@ img{
         width: 30%;
         text-align: center;
     }
-    
+    /*playlist*/
+    .form, input, button{
+        margin: 0;
+        margin-top: 0px;
+        padding: 6px;
+        font-size: 12px;
+    }
+    .titulo-playlist{
+        font-size: 80px;
+        text-align: center;
+    }
 }
 
 
@@ -750,7 +758,11 @@ img{
         text-align: center;
         margin-top: 0;
     }
-    
+    /*playlist*/
+    .titulo-playlist{
+        font-size: 40px;
+        text-align: center;
+    }
     /* footer*/ 
     footer p {
         font-size: 6.5px;
