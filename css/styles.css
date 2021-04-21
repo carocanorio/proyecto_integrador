@@ -70,7 +70,6 @@ button{
     text-align: right;
 }
 
-
 /*Footer*/
 footer{
     font-family: 'Josefin Sans', sans-serif;
@@ -93,6 +92,15 @@ p{
     flex-direction: row;
 }
 
+.arriba{
+    border-radius: 22px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    width: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
 /*Home*/
 .prese {
