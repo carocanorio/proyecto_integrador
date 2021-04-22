@@ -509,6 +509,7 @@ img{
     .genres {
         width: 30%;
         margin-top: 0;
+        padding: 3%;
     }
     .genres h4 {
         font-size: 20px;
@@ -557,6 +558,7 @@ img{
     .track_home {
         width: 30%;
         text-align: center;
+        padding: 4%;
     }
     .track_home h5 a {
         font-size: 10px;
@@ -569,6 +571,7 @@ img{
     .album_track_home {
         width: 30%; 
         text-align: center;
+        padding: 4%;
     } 
     .album_track_home h5 a{
         font-size: 12.5px;
@@ -580,12 +583,45 @@ img{
     .artistas_home  {
         width: 30%;
         text-align: center;
+        padding: 4%;
     }
     .arriba{
         width: 30px;
     }
     .arriba a {
         font-size: 20px;
+    }
+
+    /*palylist*/
+
+    .titulo-playlist {
+        font-size: 60px;
+    }
+
+    /*Search Results*/
+    .result-titulo{
+        font-size: 35px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    
+    }
+    .leyenda {
+        font-size: 20px;
+    }
+    .result-subtitulo{
+        font-size: 35px;
+        margin: 3%;
+        margin-top: 15%;
+    }
+    .result0{
+        font-size: 15px;
+    }
+    .result-relacionados{
+        font-size: 25px;
+    }
+    .result-item {
+        width: 35%;
+        justify-content: space-around;
     }
     
 }
@@ -667,15 +703,24 @@ img{
     }
 
     /*Search Results*/
-    .search{
-        font-size: 40px;
-        margin-top: 15%;
+    .result-titulo{
+        font-size: 30px;
+        margin-top: 10%;
         margin-bottom: 10%;
+        text-align: center;
+    }
+    .leyenda {
+        font-size: 15px;
+    }
+    .result-subtitulo{
+        font-size: 30px;
+        margin: 3%;
+        margin-top: 20%;
     }
     .result0{
         font-size: 10px;
     }
-    .result1{
+    .result-relacionados{
         font-size: 20px;
     }
 
@@ -777,6 +822,7 @@ img{
         width: 45%;
         text-align: center;
         margin-top: 0;
+        padding: 2%;
     }
     
     /* footer*/ 
@@ -788,6 +834,11 @@ img{
     }
     .foot {
         font-size: 6.5px;
+    }
+
+    /*palylist*/
+    .titulo-playlist {
+        font-size: 40px;
     }
 
 }
