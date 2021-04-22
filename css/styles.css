@@ -438,13 +438,16 @@ img{
     margin: 1%;
     font-size: 40px;
 }
-.result0{
+.result0, .leyenda{
     margin: 3%;
     font-size: 20px;
     color:white;
 }
 .busqueda1{
     margin-top: 5%;
+}
+.leyenda{
+    display: none;
 }
 
 
