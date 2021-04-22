@@ -138,7 +138,6 @@ h3 {
 .album_track_home_conteiner {
     display: flex;
     flex-wrap:wrap;
-    
     justify-content: space-around;
 }
 .album_track_home {
@@ -765,7 +764,6 @@ img{
         text-align: center;
     }
     .track_home_conteiner{
-        align-items: center;
         padding: 1%;
     }   
     .track_home {
@@ -774,7 +772,6 @@ img{
         text-align: center;
     } 
     .album_track_home_conteiner {
-        align-items: center;
         padding: 1%;
     }
     .album_track_home {
@@ -783,7 +780,6 @@ img{
         text-align: center;
     } 
     .contenedor_artistas_home {
-        align-items: center;
         padding: 1%;
     }
     .artistas_home  {
@@ -812,11 +808,9 @@ img{
         font-size: 30px;
         margin: 10%;
         text-align: center;
-        align-items: center;
     }
     .contenedor_generos { 
-        align-items: center;
-        padding: 1%;
+        padding: 6%;
     }
     .genres {
         width: 45%;
