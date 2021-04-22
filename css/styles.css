@@ -25,6 +25,9 @@ header{
     justify-content: space-between;
     width: 100%;
 }
+form{ 
+    align-items: flex-start;
+}
 .header, a{
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -33,7 +36,7 @@ header{
 }
 input, button{
     font-family: 'Josefin Sans', sans-serif;
-    color: white;
+    align-self: center;
     margin: 1px;
     margin-top: 12px;
     padding: 9px;
@@ -47,6 +50,7 @@ button{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     margin-top: 0%;
 }
@@ -59,8 +63,10 @@ button{
     word-spacing: 2px;
     color: white;
     text-decoration: none;
+    background-color: none;
     margin: 10px;
     letter-spacing: 3px;
+    text-align: right;
 }
 
 /*Footer*/
@@ -83,6 +89,7 @@ i{
 
 
 
+
 /*Home*/
 .prese {
     font-family:'Josefin Sans', sans-serif;
@@ -93,6 +100,7 @@ i{
 .presen{
     font-family:'Josefin Sans', sans-serif;
     color: white;
+    padding: 0px;
     line-height: 3px;
     margin: 5%;
     letter-spacing: 5px;    
@@ -200,6 +208,7 @@ h3 {
 .song{
     font-family:'Josefin Sans', sans-serif;
     color: white;
+    text-align: left;
     font-size: 90px;
     letter-spacing: 5px;
     margin: 30px;
@@ -220,9 +229,10 @@ h3 {
 
 /*Detail.artist*/
 .artist{
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
     margin:0px;
 }
 .imgartist{
@@ -244,11 +254,13 @@ h3 {
     color: white;
     font-size: 22px;
 }
+.top{
+    margin: 6px;
+}
 .biblioteca{
     font-size: 45px;
     margin: 15px;
     text-indent: -2px;
-    margin-top: 3%;
 }
 .she3{
     margin: 8px;
@@ -269,6 +281,7 @@ h3 {
 .dom{
     font-family:'Josefin Sans', sans-serif;
     color: white;
+    text-align: left;
     font-size: 80px;
     letter-spacing: 3px;
     margin: 30px;
@@ -277,7 +290,7 @@ h3 {
     margin: 6px
 }
 .top{
-    list-style: lower-roman;
+    list-style: upper-roman;
 }
 
 
@@ -424,16 +437,13 @@ img{
     margin: 1%;
     font-size: 40px;
 }
-.result0, .leyenda{
+.result0{
     margin: 3%;
     font-size: 20px;
     color:white;
 }
 .busqueda1{
     margin-top: 5%;
-}
-.leyenda{
-    display: none;
 }
 
 
@@ -505,7 +515,11 @@ img{
         margin-top: 0px;
         padding: 6px;
         font-size: 12px;
-    }    
+        
+    } 
+    form {
+        margin-top: 2%;
+    }   
     .menu { 
         font-size: 15px;
         margin: 6px;
@@ -532,10 +546,12 @@ img{
         text-align: center;
     }
     .track_home h5 a {
-        font-size: 10px; 
+        font-size: 10px;
+        
     }
     .track_home h3 a {
         font-size: 15px;
+        
     }
     .album_track_home {
         width: 30%; 
@@ -552,17 +568,7 @@ img{
         width: 30%;
         text-align: center;
     }
-    /*playlist*/
-    .form, input, button{
-        margin: 0;
-        margin-top: 0px;
-        padding: 6px;
-        font-size: 12px;
-    }
-    .titulo-playlist{
-        font-size: 80px;
-        text-align: center;
-    }
+    
 }
 
 
@@ -747,11 +753,7 @@ img{
         text-align: center;
         margin-top: 0;
     }
-    /*playlist*/
-    .titulo-playlist{
-        font-size: 40px;
-        text-align: center;
-    }
+    
     /* footer*/ 
     footer p {
         font-size: 6.5px;
