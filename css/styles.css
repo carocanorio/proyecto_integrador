@@ -424,23 +424,39 @@ img{
 
 
 /*Search Results*/
-.search{
+.result-titulo{
     color: white;
     text-align: left;
-    margin: 5%;
-    font-size: 80px;
-}
-.result1{
     margin: 1%;
+    font-size: 60px;
+    margin-bottom: 3%;
+}
+.result-relacionados{
+    margin: 3%;
     font-size: 40px;
+    margin-top: 7%;
+    text-align: center;
 }
 .result0{
     margin: 3%;
+    margin-top: 3%;
     font-size: 20px;
     color:white;
 }
-.busqueda1{
-    margin-top: 5%;
+.result-subtitulo{
+    font-family:'Josefin Sans', sans-serif;
+    margin-top: 7%;
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    
+}
+.leyenda {
+    font-family:'Josefin Sans', sans-serif;
+    color:rgba(255, 255, 255, 0.849);
+    margin: 5%;
+    text-align: center;
+    font-size: 30px;
 }
 
 
