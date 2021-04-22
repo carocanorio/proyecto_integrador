@@ -87,9 +87,6 @@ i{
     margin: 4px;
 }
 
-
-
-
 /*Home*/
 .prese {
     font-family:'Josefin Sans', sans-serif;
@@ -568,6 +565,12 @@ img{
         width: 30%;
         text-align: center;
     }
+    .arriba{
+        width: 30px;
+    }
+    .arriba a {
+        font-size: 20px;
+    }
     
 }
 
@@ -726,6 +729,12 @@ img{
         width: 45%;
         margin: 2.5%;
         text-align: center;
+    }
+    .arriba{
+        width: 23px;
+    }
+    .arriba a {
+        font-size: 15px;
     }
 
     /*detalle de género*/
