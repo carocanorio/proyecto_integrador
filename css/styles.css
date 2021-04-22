@@ -28,11 +28,11 @@ header{
 form{ 
     align-items: flex-start;
 }
-.header, a{
+git add ..header, a{
     letter-spacing: 2px;
     word-spacing: 2px;
     color: white;
-    text-decoration: none;
+    text-decoration: none; 
 }
 input, button{
     font-family: 'Josefin Sans', sans-serif;
