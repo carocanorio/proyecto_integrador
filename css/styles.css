@@ -461,10 +461,6 @@ img{
 
 
 /*Media queries*/
-@keyframes width{
-    100% {width:100%;}
-}
-
 /*Tablets*/
 @media (max-width: 768px){
 
