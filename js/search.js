@@ -15,7 +15,8 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = `https://api.deezer.com/version/service/id/method/?parameters`;
+    let url = ``;
+    
 
    
     fetch ( url ) //consultando la API
