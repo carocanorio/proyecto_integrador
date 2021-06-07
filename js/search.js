@@ -1,12 +1,14 @@
 /*La página deberá mostrar:
-El término buscado. Ejemplo: “Resultados de búsqueda para: término ingresado en el input.”
+
 La lista de resultados que coincidan con el término buscado.
 Los resultados deberán ser hipervínculos a las páginas de detalle correspondientes.
 Para el caso de no haber resultados que coincidan con el término buscado la página debe avisar al usuario que no hay coincidencias.
-Si la búsqueda tarda en cargar deberá aparecer un spinner, gif animado o mensaje que dé al usuario referencia de que el procesos se está ejecutando. El elemento debe ocultarse una vez que el contenido de la página haya cargado por completo.
 */
 
 window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
+
+    let loader = document.querySelector(".gif");
+    loader.style.display = "none"; //esconderlo, si no le pongo comillas el lenguaje interpreta q estoy escribiendo una variable
     
     let queryString = location.search; //retorna la infomación en cadena de texto (dificil procesar y manipular), almaccena QS de una url
     let queryStringObj = new URLSearchParams (queryString);  //la transformamos en Objeto literal
@@ -15,14 +17,12 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = ``;
+    let url = "https://cors-anywhere.herokuapp.com/corsdemo/https://api.deezer.com/track/3135556";
     
-
-   
     fetch ( url ) //consultando la API
 
         .then (function (response){
-            return response.JSON();
+            return response.json();
         })
         .then (function (data){
 
