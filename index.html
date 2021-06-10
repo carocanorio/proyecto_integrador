@@ -17,6 +17,20 @@
             <form action="search-results.html" method="GET">
                 <input type="search" name="search" value=""  placeholder="Buscar en Hurrian">
                 <button type="submit">Buscar</button>
+
+                <div class="filtros">
+                    <input type="radio" id="todos" name="busqueda" value="Todos">
+                    <label for="Todos">Todos</label>
+                    <input type="radio" id="artista" name="busqueda" value="Artista">
+                    <label for="Artista">Artistas</label>
+                    <input type="radio" id="cancion" name="busqueda" value="Cancion">
+                    <label for="Cancion">Canciones</label>
+                    <input type="radio" id="album" name="busqueda" value="Album">
+                    <label for="Album">Albumes</label>
+                    <input type="radio" id="genero" name="busqueda" value="Género">
+                    <label for="Generos">Generos</label>
+                </div>
+                
             </form>
 
             <ul class="menu">
@@ -151,7 +165,8 @@
             <p>Contacto:  <a class="foot" href="mailto:ccanoriohellwing@udesa.edu.ar">   Carolina Canorio, </a> <a class="foot" href="mailto:fmainardi@udesa.edu.ar">Franco Mainardi, </a><a class="foot" href="mailto:abuccierorodriguez@udesa.edu.ar">Quillén Bucciero</a></p>
         </footer>
     
-    
+    <!--Link a JS-->
+    <script src="./js/index.js"></script>
 
 </body>
 </html>
