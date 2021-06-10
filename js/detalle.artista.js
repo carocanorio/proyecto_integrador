@@ -1,74 +1,56 @@
 window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
-    // detalle gif
-let queryString = location.search //Caputramso qs
+
+let queryString = location.search //Caputramos qs
 let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
 let id = queryStringToObject.get('id');
 
-let url = ``
+let url = `` //
 
-fetch( url )
-    .then( function(response){
-        return response.json();
+fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
+    .then( function(response){ //procesa
+        return response.json(); //es otra promesa, necesita otro then para contenerla
     })
-    .then( function(data){
-        //Aca muestro código
-        // console.log(data);
-        let section = document.querySelector('.detalle')
+    .then( function(data){ //Aca muestro código
+        let section = document.querySelector('.artisthalsey'); //selecciono la seccion
+        section.innerHTML += `<h1 class="she">${data.data.name}</h1>`;     //meto titulo
 
-        section.innerHTML += `<article>
-                                <h2>${data.data.title}</h2>
-                                <img src="${data.data.images.original.url}">
-                            </article>`        
+        let infoArtista = document.querySelector(".artist"); //si no es entre comillas lo toma como variable
+        infoArtista.innerHTML += `<div class="imgartist"> 
+                                    <img width="400px" class="detalle"  src="${data.data.picture.url}" alt="Artista">
+                                 </div>` //agrego a y mantengp lo q estaba en infoartista
     })
     .catch( function(error){
         console.log(error);
     })
 
+let link = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127"
 
-//Agregar gif a lista de favoritos.
-let favoritos = [];
+fetch( link ) //Permite consultar la url de forma asincrónica, es una promesa
+    .then( function(response){ //procesa
+        return response.json(); //es otra promesa, necesita otro then para contenerla
+    })
+    .then( function(data){ //Aca muestro código
+        let arrayInfo = data.data; //es un OL, variable.propiedad
+        let topAlbums = document.querySelector(".contenido");
+        let contenidoLista =""; //contenido dentro de la lista, a llenar
+    
+        for(let i=0; i<arrayInfo.length; i++){//bucle  que recorre array de albumes
+            contenidoLista += `
+            <h4 class="she2">Top albumes:
+                <ol class="toptracks">
+                    <li> 
+                        <a href="detail_album.html?id=${arrayInfo[i].id}"> 
+                                 ${arrayInfo[i].title}
+                        </a>
+                    </li>
+                </ol>
+            </h4>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
 
-//Recuperar datos del Storage
-let recuperoStorage = localStorage.getItem("favoritos"); //que storage me de lo q hay en favoritos
-
-//Chequar  y agregar la información de local storage en el array
-if(recuperoStorage != null){
-    favoritos = JSON.parse(recuperoStorage); //si me devolvió algo lo parseo y meto en variable favoritos
-}
-
-//Chequear que el id esté en favoritos para cambiar el texto al usuario
-if(favoritos.includes(id)){
-    document.querySelector("fav").innerText = "Quitar de favoritos";
-}
-
-//Cuando el usuario haga click en "agregar a favoritos _> Agregar id del gif dentro del array.
-let fav = document.querySelector('.fav');
-console.log(fav);
-
-fav.addEventListener("click", function(e){ 
-    console.log(e);
-    e.preventDefault();
-
-    //Chequear si el id esta en el array
-    if(favoritos.includes(id)){
-        let idSacar = favoritos.indexOf(id) //para sacarlo tengo q ver la posicion
-        favoritos.splice(idSacar , 1);
-        document.querySelector(".fav").innerText = "Agregar a favoritos"
-    }else{
-        //Guardamos el id en el array
-        favoritos.push(id);
-        console.log(favoritos);
-        document.querySelector("fav").innerText = "Quitar de favoritos";
-    }
-   
-
-    //Armamos un string
-    let favParaStorage = JSON.stringify(favoritos); 
-    //Lo guardamos dentro de localStorage
-    localStorage.setItem('favoritos', favParaStorage); 
-    console.log(localStorage);
+        topAlbums.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
+        } 
+    })
+    .catch(function (error){
+        console.log(error)
+    });
 
 })
-
-   
-})  

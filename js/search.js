@@ -17,10 +17,9 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart";
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/charts/albums`;
     
     fetch ( url ) //consultando la API
-
         .then (function (response){
             return response.json();
         })
@@ -35,6 +34,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
                 resultados += `<section class="artistas_home result-item">
                 <h4>${informacion[i].title} </h4>
                 <img src="${informacion[i].images.original.url}"> </a>
+                </section class="artistas_home result-item">
                 `
             }
 
