@@ -4,13 +4,13 @@ let queryString = location.search //Caputramos qs
 let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
 let id = queryStringToObject.get('id');
 
-let url = `` //
+let url = `https://cors-anywhere.herokuapp.com/` //
 
 fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
         return response.json(); //es otra promesa, necesita otro then para contenerla
     })
-    .then( function(data){ //Aca muestro código
+    .then( function(data){ //Aca muestro código, el segundo then recibe la info del primer then y trabajo con info que recibí
         let section = document.querySelector('.artisthalsey'); //selecciono la seccion
         section.innerHTML += `<h1 class="she">${data.data.name}</h1>`;     //meto titulo
 
@@ -23,7 +23,7 @@ fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
         console.log(error);
     })
 
-let link = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127"
+let link = "https://cors-anywhere.herokuapp.com/"
 
 fetch( link ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
