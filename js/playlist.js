@@ -1,1 +1,1 @@
-document.querySelectorAll('.agregarafavorito')
+document.querySelectorAll('.agregarafavoritos')
