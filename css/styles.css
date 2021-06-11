@@ -70,11 +70,12 @@ button{
     text-align: right;
 }
 .alerta{
-    color:white;
+    color:rgb(136, 20, 20);
+    font-size: 18px;
 }
 .closeIcon{
     display: none;
-    color: red;
+    color: rgb(136, 20, 20);
 }
 
 
