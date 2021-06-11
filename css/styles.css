@@ -87,6 +87,19 @@ i{
     margin: 4px;
 }
 
+/* GIF LOADER*/
+.gif {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+    height: 100vh;
+}
+.gif img {
+    margin:25% ;
+}
+
+
 /*Home*/
 .prese {
     font-family:'Josefin Sans', sans-serif;
