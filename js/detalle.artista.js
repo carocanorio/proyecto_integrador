@@ -4,7 +4,7 @@ let queryString = location.search //Caputramos qs
 let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
 let id = queryStringToObject.get('id');
 
-let url = `https://cors-anywhere.herokuapp.com/` //
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/` //
 
 fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa

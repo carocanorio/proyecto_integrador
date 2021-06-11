@@ -15,12 +15,12 @@ window.addEventListener("load", function(){
             let arrayInfo = data.data;
             let contenidoLista = "";
 
-            nombreAlbum.innerText += `${data.data.title}`;
+            nombreAlbum.innerText += `${data.title}`;
             imagen.src = data.data.album.cover;
             generoFechaArtista.innerHTML = `
-                    <h4 class="halsey">Artista:<a class="hal" href="detail_artist.html">${data.data.artist.name}</a></h4>
-                    <h4 class="halsey">Género:<a class="hal" href="detail-genres.html">${data.data.genres.type}</a></h4>
-                    <h4 class="halsey">Fecha de publicación: ${data.data.release_date} </h4>
+                    <h4 class="halsey">Artista:<a class="hal" href="detail_artist.html">${data.artist.name}</a></h4>
+                    <h4 class="halsey">Género:<a class="hal" href="detail-genres.html">${data.genres.data[0].name}</a></h4>
+                    <h4 class="halsey">Fecha de publicación: ${data.release_date} </h4>
             `
             for(let i=0; i<arrayInfo.length; i++){//bucle  que recorre array de tracks
                 contenidoLista += `
@@ -34,7 +34,6 @@ window.addEventListener("load", function(){
             }
 
 })
-
 
 
 })
