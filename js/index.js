@@ -1,3 +1,22 @@
+addEventListener('DOMContentLoaded', ()=> {
+
+    const imagenes = []// falta agregar las imagenes
+
+    let i = 1
+    const img1 = document.querySelector('#img1')
+    const img2 = document.querySelector('#img1')
+    const progressBar = document.querySelector('#progress-bar')
+    const divIndicadores = document.querySelector('#indicadores')
+    let porcentaje_base = 100/ imagenes.length
+    let porcentaje_actual =porcentaje_base
+    
+    for (let index = 0; index < imagenes.length; index++) {
+        const div = document.createElement('div')
+        div.classList.add('circles')
+        div.id = index
+        divIndicadores.appendChild(div)
+    }
+})
 
     
 
