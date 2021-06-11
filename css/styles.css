@@ -45,6 +45,7 @@ input, button{
 }
 button{
     color: black;
+    padding: 5px;
 }
 .menu{
     display: flex;
@@ -68,6 +69,15 @@ button{
     letter-spacing: 3px;
     text-align: right;
 }
+.alerta{
+    color:rgb(136, 20, 20);
+    font-size: 18px;
+}
+.closeIcon{
+    display: none;
+    color: rgb(136, 20, 20);
+}
+
 
 /*Footer*/
 footer{
