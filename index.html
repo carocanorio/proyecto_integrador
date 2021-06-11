@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
     <title>Hurrian</title>
 </head>
@@ -16,7 +17,9 @@
 
             <form action="search-results.html" method="GET">
                 <input type="search" name="search" value=""  placeholder="Buscar en Hurrian">
-                <button type="submit">Buscar</button>
+                <i class="fas fa-exclamation-circle closeIcon"></i>
+                <button type="submit"><i class="fas fa-search search"></i></button>
+                <p class="alerta"></p>
 
                 <div class="filtros">
                     <input type="radio" id="todos" name="busqueda" value="Todos">
@@ -26,9 +29,9 @@
                     <input type="radio" id="cancion" name="busqueda" value="Cancion">
                     <label for="Cancion">Canciones</label>
                     <input type="radio" id="album" name="busqueda" value="Album">
-                    <label for="Album">Albumes</label>
+                    <label for="Album">Álbumes</label>
                     <input type="radio" id="genero" name="busqueda" value="Género">
-                    <label for="Generos">Generos</label>
+                    <label for="Generos">Géneros</label>
                 </div>
                 
             </form>
