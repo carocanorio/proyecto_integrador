@@ -4,20 +4,14 @@ let queryString = location.search //Caputramos qs
 let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
 let id = queryStringToObject.get('id');
 
-let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/` //
+let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}` //
 
 fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
         return response.json(); //es otra promesa, necesita otro then para contenerla
     })
     .then( function(data){ //Aca muestro código, el segundo then recibe la info del primer then y trabajo con info que recibí
-        let section = document.querySelector('.artisthalsey'); //selecciono la seccion
-        section.innerHTML += `<h1 class="she">${data.data.name}</h1>`;     //meto titulo
-
-        let infoArtista = document.querySelector(".artist"); //si no es entre comillas lo toma como variable
-        infoArtista.innerHTML += `<div class="imgartist"> 
-                                    <img width="400px" class="detalle"  src="${data.data.picture.url}" alt="Artista">
-                                 </div>` //agrego a y mantengp lo q estaba en infoartista
+       console.log(data)
     })
     .catch( function(error){
         console.log(error);
