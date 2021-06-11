@@ -72,8 +72,9 @@ h4, h5, h1 {
 }
 .resaltado{
     background-color: red;
+    transition: background-color .8s;
 }
-
+ 
 /*Header*/
 header{
     display: flex;
