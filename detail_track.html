@@ -15,8 +15,24 @@
     <header>
 
         <form action="search-results.html" method="GET">
-            <input type="search" name="search"  value="" placeholder="Buscar en Hurrian">
-            <button type="submit">Buscar</button>
+            <input type="search" name="search" value=""  placeholder="Buscar en Hurrian">
+            <i class="fas fa-exclamation-circle closeIcon"></i>
+            <button type="submit"><i class="fas fa-search search"></i></button>
+            <p class="alerta"></p>
+
+            <div class="filtros">
+                <input type="radio" id="todos" name="busqueda" value="Todos">
+                <label for="Todos">Todos</label>
+                <input type="radio" id="artista" name="busqueda" value="Artista">
+                <label for="Artista">Artistas</label>
+                <input type="radio" id="cancion" name="busqueda" value="Cancion">
+                <label for="Cancion">Canciones</label>
+                <input type="radio" id="album" name="busqueda" value="Album">
+                <label for="Album">Álbumes</label>
+                <input type="radio" id="genero" name="busqueda" value="Género">
+                <label for="Generos">Géneros</label>
+            </div>
+            
         </form>
 
         <ul class="menu">
@@ -27,26 +43,21 @@
         </ul>
 
     </header>
+     
 
     <!--título principal-->
     <section class="eyesclosed">
-        <h1 class="song">Eyes closed</h1>
+        <h1 class="song"></h1>
     </section>
     
     <!--información sobre la canción-->
     <section class="track">
 
         <div class="img">
-            <img width="400px"  class="detalle"   src="../proyecto_integrador/img/Album.cover.halsey.jpg" alt="Halsey Album Cover">
+            <img width="400px"  class="detalle"   src="" alt="Album Cover">
         </div>
 
         <aside class="sey">
-            <h4 class="halsey">Artista: <a class="hal" href="detail_artist.html">Halsey</a></h4>
-            <h4 class="halsey">Album: <a class="hal" href="detail_album.html">Hopeless Fountain Kingdom (2017)</a></h4>
-            <h4 class="halsey"><a class="hal" href="https://www.youtube.com/watch?v=9LhN6E01Mkc"> <i class="far fa-play-circle"></i> Escuchar "Eyes Closed"</a></h4>
-            <h4 class="halsey"> <i class="fab fa-youtube"></i> <a class="hal" href="https://youtu.be/9LhN6E01Mkc">Video de Youtube</a></h4>
-            <h4 class="agregarafavortios"><i class="far fa-heart"></i><a class="hal" href="playlist.html"> Agregar a favoritos</a></h4>
-            <h4 class="halsey"> <a class="si2" href="playlist.html">Ver playlist</a></h4>
         </aside>
 
     </section>
@@ -59,7 +70,7 @@
     </footer>
 
     <!--Link a JS-->
-    <script src="js/playlist.js"></script>
+    <script src="js/detalle.track.js"></script>
         
 </body>
 </html>

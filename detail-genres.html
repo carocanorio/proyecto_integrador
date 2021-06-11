@@ -15,8 +15,24 @@
     <header>
 
         <form action="search-results.html" method="GET">
-            <input type="search" name="search"  value="" placeholder="Buscar en Hurrian">
-            <button type="submit">Buscar</button>
+            <input type="search" name="search" value=""  placeholder="Buscar en Hurrian">
+            <i class="fas fa-exclamation-circle closeIcon"></i>
+            <button type="submit"><i class="fas fa-search search"></i></button>
+            <p class="alerta"></p>
+
+            <div class="filtros">
+                <input type="radio" id="todos" name="busqueda" value="Todos">
+                <label for="Todos">Todos</label>
+                <input type="radio" id="artista" name="busqueda" value="Artista">
+                <label for="Artista">Artistas</label>
+                <input type="radio" id="cancion" name="busqueda" value="Cancion">
+                <label for="Cancion">Canciones</label>
+                <input type="radio" id="album" name="busqueda" value="Album">
+                <label for="Album">Álbumes</label>
+                <input type="radio" id="genero" name="busqueda" value="Género">
+                <label for="Generos">Géneros</label>
+            </div>
+            
         </form>
 
         <ul class="menu">
@@ -25,6 +41,7 @@
             <li><a  class="pre" href="playlist.html">  Mi playlist  </a></li>
             <li class="logo"><img width="50px" src="./img/logo.hurrian.blanco.png" alt="Logo"></li>
         </ul>
+
     </header>
 
     <!--título principal-->
