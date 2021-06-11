@@ -47,5 +47,5 @@ formulario.addEventListener("submit" , function(e){
 
 campoBuscar.addEventListener("input" , function(){
     alert.innerText = "";
-    closeIcon.style.display = "display"
+    closeIcon.style.display = "none"
 })
