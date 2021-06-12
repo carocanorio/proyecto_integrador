@@ -79,8 +79,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         
             relatedArtists.innerHTML += contenedor; //a top albums le agrego lo que puse en contenido lista
             } 
-            
-                
+                       
         })
         .catch( function(error){
             console.log(error);

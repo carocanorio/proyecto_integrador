@@ -341,7 +341,14 @@ h3 {
 .top{
     margin: 6px;
 }
-
+.titulo{
+    color: white;
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    margin: 1%;
+    font-size: 50px;
+}
 
 
 /*Detail album*/
