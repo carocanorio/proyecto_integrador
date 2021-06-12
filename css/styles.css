@@ -281,14 +281,7 @@ h3 {
 }
 .sey{
     padding: 15px;
-}
-.song{
-    font-family:'Josefin Sans', sans-serif;
-    color: white;
-    text-align: left;
-    font-size: 90px;
-    letter-spacing: 5px;
-    margin: 30px;
+    margin-left: 5%;
 }
 .halsey, .hal, .si2, .nombre, .genero, .fecha{
     font-family: 'Josefin Sans', sans-serif;
@@ -301,6 +294,7 @@ h3 {
     color: white;
     font-size: 18px;
     border-radius: 22px;
+    text-align: center;
 }
 .detalle{
     border-radius: 100%;
@@ -355,14 +349,6 @@ h3 {
 /*Detail album*/
 .info{
     padding: 15px;
-}
-.dom{
-    font-family:'Josefin Sans', sans-serif;
-    color: white;
-    text-align: left;
-    font-size: 80px;
-    letter-spacing: 3px;
-    margin: 30px;
 }
 .lista1{
     margin: 6px

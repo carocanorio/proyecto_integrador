@@ -1,26 +1,78 @@
 window.addEventListener("load", function(){
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556`;
 
     fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
-        .then( function(response){ //procesa
+    .then( function(response){ //procesa
             return response.json(); //es otra promesa, necesita otro then para contenerla
-        })
-        .then( function(data){ //Aca muestro código
+    })
+    .then( function(data){ //Aca muestro código
     
-            let section = document.querySelector('.artisthalsey'); //selecciono la seccion
-            section.innerHTML += `<h1 class="she">${data.name}</h1>`;     //meto titulo
+        let section = document.querySelector('.she'); //selecciono la seccion
+        section.innerText += `${data.title}`;     //meto titulo
     
-            let img= document.querySelector(".detalle"); //si no es entre comillas lo toma como variable
-            img.innerHTML += `<img src="${data.picture}">`            //agrego a y mantengp lo q estaba en img
-    
-        })
-        .catch( function(error){
-            console.log(error);
-        })
+        let img= document.querySelector(".img");
+        img.innerHTML += `<img width="400px"  class="detalle"   src="${data.album.cover_big}" alt="Album Cover">`
+            
+        let artista = document.querySelector(".nombre");
+        artista.innerHTML += `<a href="detail_artist.html?id=${data.artist.id}">${data.artist.name}</a>`    
+            
+        let album = document.querySelector(".genero");
+        album.innerHTML += `<a href="detail-genres.html?id=${data.album.id}">${data.album.title}</a>` 
+            
+        let player = document.querySelector(".player");
+         player.src =`https://widget.deezer.com/widget/light/track/3135556`
+
+        let tituloPlayer = document.querySelector(".halsey");
+        tituloPlayer.innerText += ` ${data.title}`
+    })
+    .catch( function(error){
+        console.log(error);
+    })
 
 
 
+    let favoritos = [];//Agregar a playlist
+
+    //Recuperar datos del storage
+    let recuperoStorage = localStorage.getItem('favoritos');
+
+    //Chequear y agregar la información de local storage en el array
+    if(recuperoStorage != null){
+        favoritos = JSON.parse(recuperoStorage);
+    }       
+
+    //Chequear que el id esté en el array para cambiar el texto al usuario.
+    if(favoritos.includes(id)){
+        document.querySelector('.si2').innerText = `<i class="fas fa-heart"></i> Quitar de favoritos`;
+    }
+
+    //Cuando el usuario haga click en "agregar a favoritos _> Agregar id del gif dentro del array.
+    let fav = document.querySelector('.si2');
+    console.log(fav);
+
+    fav.addEventListener("click", function(e){
+        e.preventDefault();
+
+    //Chequear si el id está en el array
+    if(favoritos.includes(id)){
+        let idASacar = favoritos.indexOf(id);
+        favoritos.splice(idASacar, 1);
+        document.querySelector('.si2').innerText = `<i class="far fa-heart"></i> Añadir a mi playlist`;
+    } else {
+        //Guardamos el id en el array
+        favoritos.push(id);
+        console.log(favoritos);
+        document.querySelector('.si2').innerText = `<i class="fas fa-heart"></i> Quitar de favoritos`;
+    }
+
+    //Armamos un string
+    let favParaStorage = JSON.stringify(favoritos);
+    //Lo guardamos dentro de localStorage
+    localStorage.setItem('favoritos', favParaStorage);
+    console.log(localStorage);
+
+})
 
 
 
