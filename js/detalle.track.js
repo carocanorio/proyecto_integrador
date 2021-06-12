@@ -2,6 +2,25 @@ window.addEventListener("load", function(){
 
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
 
+    fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
+        .then( function(response){ //procesa
+            return response.json(); //es otra promesa, necesita otro then para contenerla
+        })
+        .then( function(data){ //Aca muestro código
+    
+            let section = document.querySelector('.artisthalsey'); //selecciono la seccion
+            section.innerHTML += `<h1 class="she">${data.name}</h1>`;     //meto titulo
+    
+            let img= document.querySelector(".detalle"); //si no es entre comillas lo toma como variable
+            img.innerHTML += `<img src="${data.picture}">`            //agrego a y mantengp lo q estaba en img
+    
+        })
+        .catch( function(error){
+            console.log(error);
+        })
+
+
+
 
 
 

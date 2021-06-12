@@ -302,7 +302,9 @@ h3 {
     font-size: 18px;
     border-radius: 22px;
 }
-
+.detalle{
+    border-radius: 100%;
+}
 
 /*Detail.artist*/
 .artist{
@@ -313,7 +315,8 @@ h3 {
     margin:0px;
 }
 .imgartist{
-    padding: 9px;
+    padding:9px ;
+    margin-left: 5%;
 }
 .contenido{
     padding: 15px;
@@ -321,34 +324,24 @@ h3 {
 .she{
     font-family:'Josefin Sans', sans-serif;
     color: white;
-    text-align: left;
+    text-align: center;
     font-size: 90px;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     margin: 30px;
 }
-.she2, .top, .biblioteca, .she3{
+.she2, .top,.she3{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     font-size: 22px;
+    margin-left: 5%;
+}
+.she2{
+    font-size: 30px;
 }
 .top{
     margin: 6px;
 }
-.biblioteca{
-    font-size: 45px;
-    margin: 15px;
-    text-indent: -2px;
-}
-.she3{
-    margin: 8px;
-}
-.halsi{
-    padding: 12px;
-    background-color: black ;
-    color: white;
-    font-size: 18px;
-    border-radius: 22px;
-}
+
 
 
 /*Detail album*/
@@ -366,9 +359,7 @@ h3 {
 .lista1{
     margin: 6px
 }
-.top{
-    list-style: upper-roman;
-}
+
 
 
 /*Detail Genres*/
