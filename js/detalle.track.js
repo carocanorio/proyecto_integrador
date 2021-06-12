@@ -18,7 +18,7 @@ window.addEventListener("load", function(){
         artista.innerHTML += `<a href="detail_artist.html?id=${data.artist.id}">${data.artist.name}</a>`    
             
         let album = document.querySelector(".genero");
-        album.innerHTML += `<a href="detail-genres.html?id=${data.album.id}">${data.album.title}</a>` 
+        album.innerHTML += `<a href="detail_album.html?id=${data.album.id}">${data.album.title}</a>` 
             
         let player = document.querySelector(".player");
          player.src =`https://widget.deezer.com/widget/light/track/3135556`
@@ -30,6 +30,36 @@ window.addEventListener("load", function(){
         console.log(error);
     })
 
+
+//TOP SONGS
+    let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks`;
+    
+    fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
+        .then( function(response){ //procesa
+                return response.json(); //es otra promesa, necesita otro then para contenerla
+        })
+        .then( function(data){ //Aca muestro código
+
+            let arrayRelated = data.data;
+            let topSongs= document.querySelector(".contenedor_artistas_home");
+            let contenedor =""; //contenido dentro de la lista, a llenar
+            console.log(data)
+
+            for(let i=0; i<5; i++){//bucle  que recorre array de albumes
+                contenedor += `
+                <article class="artistas_home">    
+                    <a href="detail_album.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].album.cover_big}" alt="album imagen"></a>
+                    <h4><a href="detail_album.html?id=${arrayRelated[i].id}">${arrayRelated[i].title}</a></h4>
+                    <h4><a class="nombreDelArtista" href="detail_artist.html?id=${arrayRelated[i].artist.id}">${arrayRelated[i].artist.name}</a></h4>
+                </article>`
+        
+            topSongs.innerHTML += contenedor; 
+            } 
+                       
+        })
+        .catch( function(error){
+            console.log(error);
+        })
 
 
     let favoritos = [];//Agregar a playlist

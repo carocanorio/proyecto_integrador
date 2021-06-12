@@ -212,7 +212,7 @@ h3 {
     border-radius: 5%;
     width: 100%;
 }
-.track_home h5 a {
+.track_home h5 a, .nombreDelArtista{
     color: rgba(245, 245, 245, 0.795);
     font-size: 15px;
 }

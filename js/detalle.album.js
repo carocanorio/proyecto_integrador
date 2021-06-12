@@ -58,6 +58,37 @@ window.addEventListener("load", function(){
         console.log(error);
     })
             
+    //TOP ALBUMS
+    let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`;
+    
+    fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
+        .then( function(response){ //procesa
+                return response.json(); //es otra promesa, necesita otro then para contenerla
+        })
+        .then( function(data){ //Aca muestro código
+
+            let arrayRelated = data.data;
+            let topAlbums= document.querySelector(".contenedor_artistas_home");
+            let contenedor =""; //contenido dentro de la lista, a llenar
+            console.log(data)
+
+            for(let i=0; i<5; i++){//bucle  que recorre array de albumes
+                contenedor += `
+                <article class="artistas_home">    
+                    <a href="detail_album.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].cover_big}" alt="album imagen"></a>
+                    <h4><a href="detail_album.html?id=${arrayRelated[i].id}">${arrayRelated[i].title}</a></h4>
+                    <h4><a class="nombreDelArtista" href="detail_artist.html?id=${arrayRelated[i].artist.id}">${arrayRelated[i].artist.name}</a></h4>
+                </article>`
+        
+            topAlbums.innerHTML += contenedor; 
+            } 
+                       
+        })
+        .catch( function(error){
+            console.log(error);
+        })
+
+
     //validar formulario de búsqueda  
     let formulario = document.querySelector("form");
     let campoBuscar = document.querySelector("[name = search]");
