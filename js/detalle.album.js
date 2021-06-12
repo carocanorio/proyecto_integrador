@@ -1,7 +1,11 @@
 window.addEventListener("load", function(){
 
+    let queryString = location.search //Caputramos qs
+    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
+    let id = queryStringToObject.get('id');
+
     //INFORMACION DEL ALBUM
-    let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127";
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}`;
 
     fetch (url)
     .then(function (response){
@@ -31,7 +35,7 @@ window.addEventListener("load", function(){
 
 
     //TRACKLIST
-    let urlTrack = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/302127/tracks";
+    let urlTrack = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${id}/tracks`;
 
     fetch (urlTrack)
     .then(function (response){

@@ -1,29 +1,12 @@
-addEventListener('DOMContentLoaded', ()=> {
-
-    const imagenes = []// falta agregar las imagenes
-
-    let i = 1
-    const img1 = document.querySelector('#img1')
-    const img2 = document.querySelector('#img1')
-    const progressBar = document.querySelector('#progress-bar')
-    const divIndicadores = document.querySelector('#indicadores')
-    let porcentaje_base = 100/ imagenes.length
-    let porcentaje_actual =porcentaje_base
+window.addEventListener("load", function(){
     
-    for (let index = 0; index < imagenes.length; index++) {
-        const div = document.createElement('div')
-        div.classList.add('circles')
-        div.id = index
-        divIndicadores.appendChild(div)
-    }
-})
 
-//TOP SONGS
-let urlSongs = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks`;
+    //TOPSONGS
+    let urlSongs = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks`;
     
-fetch( urlSongs ) //Permite consultar la url de forma asincrónica, es una promesa
+    fetch( urlSongs ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
-            return response.json(); //es otra promesa, necesita otro then para contenerla
+        return response.json(); //es otra promesa, necesita otro then para contenerla
     })
     .then( function(data){ //Aca muestro código
 
@@ -39,7 +22,6 @@ fetch( urlSongs ) //Permite consultar la url de forma asincrónica, es una prome
                 <h5><a class="nombreDelArtista" href="detail_artist.html?id=${arraySongs[i].artist.id}">${arraySongs[i].artist.name}</a></h5>
                 <h3><a href="detail_track.html?id=${arraySongs[i].id}">${arraySongs[i].title}</a></h3>
             </article>`
-    
         topSongs.innerHTML += conten; 
         } 
                    
@@ -48,10 +30,10 @@ fetch( urlSongs ) //Permite consultar la url de forma asincrónica, es una prome
         console.log(error);
     })
 
-//TOP ALBUMS
-let urlAlbums = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`;
+    //TOP ALBUMS
+    let urlAlbums = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`;
     
-fetch( urlAlbums ) //Permite consultar la url de forma asincrónica, es una promesa
+    fetch( urlAlbums ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
             return response.json(); //es otra promesa, necesita otro then para contenerla
     })
@@ -65,10 +47,9 @@ fetch( urlAlbums ) //Permite consultar la url de forma asincrónica, es una prom
         for(let i=0; i<5; i++){//bucle  que recorre array de albumes
             contenedor += `<article class="album_track_home">
                 <a href="detail_album.html?id=${arrayAlbums[i].id}"><img src="${arrayAlbums[i].cover_big}" alt="Album"></a>
-                <h5><a class="nombreDelArtista" href="detail_artist.html?id=${arrayAlbums[i].artist.id}"></a>${arrayAlbums[i].artist.name}</h5>
+                <h5><a class="nombreDelArtista" href="detail_artist.html?id=${arrayAlbums[i].artist.id}">${arrayAlbums[i].artist.name}</a></h5>
                 <h3><a href="detail_album.html?id=${arrayAlbums[i].id}">${arrayAlbums[i].title}</a></h3>
             </article>`
-    
         topAlbums.innerHTML += contenedor; 
         } 
                    
@@ -78,13 +59,12 @@ fetch( urlAlbums ) //Permite consultar la url de forma asincrónica, es una prom
     })
 
 
-
-//ARTISTAS MÁS ESCUCHADOS
-let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists`;
+    //ARTISTAS MÁS ESCUCHADOS
+    let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists`;
     
-fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
+    fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
-            return response.json(); //es otra promesa, necesita otro then para contenerla
+        return response.json(); //es otra promesa, necesita otro then para contenerla
     })
     .then( function(data){ //Aca muestro código
 
@@ -99,7 +79,6 @@ fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una pr
                 <a href="detail_artist.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].picture_big}" alt="artista imagen"></a>
                 <h4><a href="detail_artist.html?id=${arrayRelated[i].id}">${arrayRelated[i].name}</a></h4>
             </article>`
-    
         topArtists.innerHTML += contenedo; 
         } 
                    
@@ -109,20 +88,16 @@ fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una pr
     })
 
 
-    
+    //validar formulario de búsqueda  
+    let formulario = document.querySelector("form");
+    let campoBuscar = document.querySelector("[name = search]");
+    let alert = document.querySelector(".alerta");
+    let closeIcon = document.querySelector(".closeIcon");
 
-
-//validar formulario de búsqueda  
-let formulario = document.querySelector("form");
-let campoBuscar = document.querySelector("[name = search]");
-let alert = document.querySelector(".alerta");
-let closeIcon = document.querySelector(".closeIcon");
-
-formulario.addEventListener("submit" , function(e){
-    e.preventDefault();
+    formulario.addEventListener("submit" , function(e){
+        e.preventDefault();
 
     //Chequear si hay datos. que no este vacio
-
     if(campoBuscar.value == ""){
         alert.innerText = "El campo no puede estar vacío";
         closeIcon.style.display = "inline" 
@@ -132,11 +107,16 @@ formulario.addEventListener("submit" , function(e){
     }else{
         this.submit(); //el this hace referencia al formulario
     }
+    campoBuscar.addEventListener("input" , function(){//Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
+        alert.innerText = "";
+        closeIcon.style.display = "none"
+    })
+
+    })
+
 })
 
-//Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
 
-campoBuscar.addEventListener("input" , function(){
-    alert.innerText = "";
-    closeIcon.style.display = "none"
-})
+
+
+

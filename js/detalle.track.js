@@ -1,6 +1,11 @@
-window.addEventListener("load", function(){
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/3135556`;
+window.addEventListenerdEventListener("load", function(){
+
+    let queryString = location.search //Caputramos qs
+    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
+    let id = queryStringToObject.get('id');
+
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
 
     fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
     .then( function(response){ //procesa
@@ -21,7 +26,7 @@ window.addEventListener("load", function(){
         album.innerHTML += `<a href="detail_album.html?id=${data.album.id}">${data.album.title}</a>` 
             
         let player = document.querySelector(".player");
-         player.src =`https://widget.deezer.com/widget/light/track/3135556`
+         player.src =`https://widget.deezer.com/widget/light/track/${id}`
 
         let tituloPlayer = document.querySelector(".halsey");
         tituloPlayer.innerText += ` ${data.title}`
@@ -31,7 +36,7 @@ window.addEventListener("load", function(){
     })
 
 
-//TOP SONGS
+    //TOP SONGS
     let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks`;
     
     fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
@@ -54,8 +59,7 @@ window.addEventListener("load", function(){
                 </article>`
         
             topSongs.innerHTML += contenedor; 
-            } 
-                       
+            }                   
         })
         .catch( function(error){
             console.log(error);
@@ -66,86 +70,70 @@ window.addEventListener("load", function(){
 
     //Recuperar datos del storage
     let recuperoStorage = localStorage.getItem('favoritos');
-
+    
     //Chequear y agregar la información de local storage en el array
     if(recuperoStorage != null){
         favoritos = JSON.parse(recuperoStorage);
     }       
-
+    
     //Chequear que el id esté en el array para cambiar el texto al usuario.
     if(favoritos.includes(id)){
-        document.querySelector('.si2').innerText = `<i class="fas fa-heart"></i> Quitar de favoritos`;
+        document.querySelector('.si2').innerHTML = `<i class="fas fa-heart"></i> Quitar de favoritos`;
     }
-
-    //Cuando el usuario haga click en "agregar a favoritos _> Agregar id del gif dentro del array.
+    
+    //Cuando el usuario haga click en "agregar a favoritos _> Agregar id dentro del array.
     let fav = document.querySelector('.si2');
-    console.log(fav);
-
+        console.log(fav);
+    
     fav.addEventListener("click", function(e){
         e.preventDefault();
+    
+        //Chequear si el id está en el array
+        if(favoritos.includes(id)){
+            let idASacar = favoritos.indexOf(id);
+            favoritos.splice(idASacar, 1);
+            document.querySelector('.si2').innerHTML = `<i class="far fa-heart"></i> Añadir a mi playlist`;
+        } else {
+            //Guardamos el id en el array
+            favoritos.push(id);
+            console.log(favoritos);
+            document.querySelector('.si2').innerHTML = `<i class="fas fa-heart"></i> Quitar de favoritos`;
+        }
 
-    //Chequear si el id está en el array
-    if(favoritos.includes(id)){
-        let idASacar = favoritos.indexOf(id);
-        favoritos.splice(idASacar, 1);
-        document.querySelector('.si2').innerText = `<i class="far fa-heart"></i> Añadir a mi playlist`;
-    } else {
-        //Guardamos el id en el array
-        favoritos.push(id);
-        console.log(favoritos);
-        document.querySelector('.si2').innerText = `<i class="fas fa-heart"></i> Quitar de favoritos`;
-    }
+        //Armamos un string
+        let favParaStorage = JSON.stringify(favoritos);
+        //Lo guardamos dentro de localStorage
+        localStorage.setItem('favoritos', favParaStorage);
+        console.log(localStorage);
 
-    //Armamos un string
-    let favParaStorage = JSON.stringify(favoritos);
-    //Lo guardamos dentro de localStorage
-    localStorage.setItem('favoritos', favParaStorage);
-    console.log(localStorage);
+        //validar formulario de búsqueda  
+        let formulario = document.querySelector("form");
+        let campoBuscar = document.querySelector("[name = search]");
+        let alert = document.querySelector(".alerta");
+        let closeIcon = document.querySelector(".closeIcon");
 
-})
+        formulario.addEventListener("submit" , function(e){
+            e.preventDefault();
 
+        //Chequear si hay datos. que no este vacio
 
+            if(campoBuscar.value == ""){
+                alert.innerText = "El campo no puede estar vacío";
+                closeIcon.style.display = "inline" 
+            }else if( campoBuscar.value.length < 3){
+                alert.innerText = "Por favor ingrese más de 3 carácteres";
+                closeIcon.style.display = "inline" 
+            }else{
+                this.submit(); //el this hace referencia al formulario
+            }
+        })   
+    })
 
+    //Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
 
+    alert.addEventListener("input" , function(){
+        alert.innerText = "";
+        closeIcon.style.display = "none"
+    })
 
-
-
-
-//validar formulario de búsqueda  
-let formulario = document.querySelector("form");
-let campoBuscar = document.querySelector("[name = search]");
-let alert = document.querySelector(".alerta");
-let closeIcon = document.querySelector(".closeIcon");
-
-formulario.addEventListener("submit" , function(e){
-    e.preventDefault();
-
-    //Chequear si hay datos. que no este vacio
-
-    if(campoBuscar.value == ""){
-        alert.innerText = "El campo no puede estar vacío";
-        closeIcon.style.display = "inline" 
-    }else if( campoBuscar.value.length < 3){
-        alert.innerText = "Por favor ingrese más de 3 carácteres";
-        closeIcon.style.display = "inline" 
-    }else{
-        this.submit(); //el this hace referencia al formulario
-    }
-})
-
-//Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
-
-campoBuscar.addEventListener("input" , function(){
-    alert.innerText = "";
-    closeIcon.style.display = "none"
-})
-
-
-
-
-    //<h4 class="halsey">Artista: <a class="hal" href="detail_artist.html"></a></h4>
-    //<h4 class="halsey">Album: <a class="hal" href="detail_album.html"></a></h4>
-    //<h4 class="halsey"><a class="hal" href="https://www.youtube.com/watch?v=9LhN6E01Mkc"> <i class="far fa-play-circle"></i> Escuchar "Eyes Closed"</a></h4>
-    //<h4 class="agregarafavortios"><i class="far fa-heart"></i><a class="hal" href="playlist.html"> Agregar a favoritos</a></h4>
-    //<h4 class="halsey"> <a class="si2" href="playlist.html">Ver playlist</a></h4>
 })

@@ -2,11 +2,9 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
 
     let queryString = location.search //Caputramos qs
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
-    let id = queryStringToObject.get('search');
+    let id = queryStringToObject.get('id');
     
-    //let realURL= `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}`;//
-
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27` 
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}` 
     
     fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
         .then( function(response){ //procesa
@@ -27,7 +25,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
 
 
     //TOP ALBUMS
-    let urlTop = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27/albums`;
+    let urlTop = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums`;
     
     fetch( urlTop ) //Permite consultar la url de forma asincrónica, es una promesa
         .then( function(response){ //procesa
@@ -54,7 +52,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         })
     
     //ARTISTAS RELACIONADOS
-    let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27/related`;
+    let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/related`;
     
     fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
         .then( function(response){ //procesa
