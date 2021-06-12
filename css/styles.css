@@ -290,7 +290,7 @@ h3 {
     letter-spacing: 5px;
     margin: 30px;
 }
-.halsey, .hal, .si2{
+.halsey, .hal, .si2, .nombre, .genero, .fecha{
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     font-size: 22px;
@@ -317,6 +317,7 @@ h3 {
 .imgartist{
     padding:9px ;
     margin-left: 5%;
+    margin-right: 5% ;
 }
 .contenido{
     padding: 15px;

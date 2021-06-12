@@ -52,9 +52,6 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
             
                 
         })
-        .catch( function(error){
-            console.log(error);
-        })
     
     //ARTISTAS RELACIONADOS
     let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/27/related`;
@@ -77,7 +74,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
                     <h4><a href="detail_artist.html?id=${arrayRelated[i].id}">${arrayRelated[i].name}</a></h4>
                 </article>`
         
-            relatedArtists.innerHTML += contenedor; //a top albums le agrego lo que puse en contenido lista
+            relatedArtists.innerHTML += contenedor; 
             } 
                        
         })
