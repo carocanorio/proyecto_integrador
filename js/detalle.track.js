@@ -1,5 +1,5 @@
 
-window.addEventListenerdEventListener("load", function(){
+window.addEventListener("load", function(){
 
     let queryString = location.search //Caputramos qs
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
@@ -53,8 +53,8 @@ window.addEventListenerdEventListener("load", function(){
             for(let i=0; i<5; i++){//bucle  que recorre array de albumes
                 contenedor += `
                 <article class="artistas_home">    
-                    <a href="detail_album.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].album.cover_big}" alt="album imagen"></a>
-                    <h4><a href="detail_album.html?id=${arrayRelated[i].id}">${arrayRelated[i].title}</a></h4>
+                    <a href="detail_track.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].album.cover_big}" alt="album imagen"></a>
+                    <h4><a href="detail_track.html?id=${arrayRelated[i].id}">${arrayRelated[i].title}</a></h4>
                     <h4><a class="nombreDelArtista" href="detail_artist.html?id=${arrayRelated[i].artist.id}">${arrayRelated[i].artist.name}</a></h4>
                 </article>`
         
@@ -104,34 +104,33 @@ window.addEventListenerdEventListener("load", function(){
         let favParaStorage = JSON.stringify(favoritos);
         //Lo guardamos dentro de localStorage
         localStorage.setItem('favoritos', favParaStorage);
-        console.log(localStorage);
-
-        //validar formulario de búsqueda  
-        let formulario = document.querySelector("form");
-        let campoBuscar = document.querySelector("[name = search]");
-        let alert = document.querySelector(".alerta");
-        let closeIcon = document.querySelector(".closeIcon");
-
-        formulario.addEventListener("submit" , function(e){
-            e.preventDefault();
-
-        //Chequear si hay datos. que no este vacio
-
-            if(campoBuscar.value == ""){
-                alert.innerText = "El campo no puede estar vacío";
-                closeIcon.style.display = "inline" 
-            }else if( campoBuscar.value.length < 3){
-                alert.innerText = "Por favor ingrese más de 3 carácteres";
-                closeIcon.style.display = "inline" 
-            }else{
-                this.submit(); //el this hace referencia al formulario
-            }
-        })   
+        console.log(localStorage);  
     })
 
     //Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
+    //validar formulario de búsqueda  
+    let formulario = document.querySelector("form");
+    let campoBuscar = document.querySelector("[name = search]");
+    let alert = document.querySelector(".alerta");
+    let closeIcon = document.querySelector(".closeIcon");
 
-    alert.addEventListener("input" , function(){
+    formulario.addEventListener("submit" , function(e){
+        e.preventDefault();
+
+    //Chequear si hay datos. que no este vacio
+
+        if(campoBuscar.value == ""){
+            alert.innerText = "El campo no puede estar vacío";
+            closeIcon.style.display = "inline" 
+        }else if( campoBuscar.value.length < 3){
+            alert.innerText = "Por favor ingrese más de 3 carácteres";
+            closeIcon.style.display = "inline" 
+        }else{
+            this.submit(); //el this hace referencia al formulario
+        }
+    }) 
+
+    campoBuscar.addEventListener("input" , function(){
         alert.innerText = "";
         closeIcon.style.display = "none"
     })

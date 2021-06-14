@@ -17,7 +17,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${search}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${search}`;
     
     fetch ( url ) //consultando la API
         .then (function (response){
@@ -25,6 +25,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         })
         .then (function (data){
 
+            
             let artistasData = data.data;
             let artistas = document.querySelector(".contenedor_artistas_home");
 
