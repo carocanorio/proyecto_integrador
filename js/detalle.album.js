@@ -52,7 +52,7 @@ window.addEventListener("load", function(){
         for(let i=0; i<arrayInfo.length; i++){//bucle  que recorre array de track
             contenidoLista += `
                     <li class="top"> 
-                        <a href="detail_track.html?id=${arrayInfo[i].id}">${arrayInfo[i].title}</a> 
+                        <a href="detail_track.html?id=${arrayInfo[i].id}"><i class="far fa-play-circle"></i>${arrayInfo[i].title}</a> 
                     </li>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
         
         
