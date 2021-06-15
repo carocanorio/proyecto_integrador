@@ -55,8 +55,10 @@ window.addEventListener("load", function(){
                         <a href="detail_track.html?id=${arrayInfo[i].id}">${arrayInfo[i].title}</a> 
                     </li>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
         
-        tracklist.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
+        
         }
+            tracklist.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
+
     })
     .catch( function(error){
         console.log(error);
@@ -84,8 +86,9 @@ window.addEventListener("load", function(){
                     <h4><a class="nombreDelArtista" href="detail_artist.html?id=${arrayRelated[i].artist.id}">${arrayRelated[i].artist.name}</a></h4>
                 </article>`
         
-            topAlbums.innerHTML += contenedor; 
+           
             } 
+             topAlbums.innerHTML += contenedor; 
                        
         })
         .catch( function(error){

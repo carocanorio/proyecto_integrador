@@ -14,7 +14,7 @@ let closeIcon = document.querySelector(".closeIcon");
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
     let id = queryStringToObject.get('id');
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}`
         
 
     fetch( url )

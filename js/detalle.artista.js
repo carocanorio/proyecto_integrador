@@ -45,9 +45,9 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
                             <img width="30px" src="${arrayInfo[i].cover_small}" alt="Album Small"> ${arrayInfo[i].title}</a> 
                         </li>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
         
-            topAlbums.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
-            } 
             
+            } 
+            topAlbums.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
                 
         })
     
@@ -72,8 +72,9 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
                     <h4><a href="detail_artist.html?id=${arrayRelated[i].id}">${arrayRelated[i].name}</a></h4>
                 </article>`
         
-            relatedArtists.innerHTML += contenedor; 
-            } 
+            
+            }
+             relatedArtists.innerHTML += contenedor; 
                        
         })
         .catch( function(error){

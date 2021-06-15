@@ -5,37 +5,47 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
 
 
 
-    let url = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
+    let urlGeneros = "https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre";
         
-    fetch ( url ) //consultando la API
-        .then (function (response){
-            return response.json();
-        })
-        .then (function (data){
-            //aca muestro código
-            console.log(data);
-            let info = data.data;
-            //capturamos los destinos
-            let generos = document.querySelector('.conenedor_generos');
-            let contenidoGeneros = ''; //poner el contenido a mostrar dentro de la sección
+ 
 
-            for(let i=0; i<info.length; i++){
-                contenidoGeneros += ` <article class="genres">   
+         fetch( urlGeneros ) //Permite consultar la url de forma asincrónica, es una promesa
+             .then( function(response){ //procesa
+               return response.json(); //es otra promesa, necesita otro then para contenerla
+         })
 
-                                            <a href="detail-genres.html?id=${info[i].id}"><img src="${info.picture_medium}" alt="genre imagen"></a>
-                                            <h4><a href="detail-genres.html">${info.name}</a></h4>
 
-                                        </article> ` //las comillas invertidas son muy importates!
-            }
+          .then( function(data){ //Aca muestro código
+    
+            let arrayInfo = data.data;
+             //capturamos los destinos
+            let generos = document.querySelector('.contenedor_generos');
+            let contenido =""; //contenido a mostrar dentro de la sección
+            console.log(data)
 
-            generos.innerHTML += contenidoGeneros
 
-            
+            for(let i=1; i<arrayInfo.length; i++){ //bucle  que recorre array de generos
+                contenido += ` <article class="genres">   
+
+                                     <a href="detail-genres.html?id=${arrayInfo[i].id}"><img class="genero-img" src="${arrayInfo[i].picture}" alt="genre imagen"></a>
+                                     <h4><a class="genero" href="detail-genres.html?=${arrayInfo[i].id}">${arrayInfo[i].name}</a></h4>
+              
+                                </article> `
+                                      
+                                
+                                }
+                                generos.innerHTML += contenido; 
+
+                                
+
             
         })
         .catch( function(error){
             console.log(error);
-        })
+        }) 
+
+    
+           
 
         
 //validar formulario de búsqueda  

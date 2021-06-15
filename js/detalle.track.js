@@ -58,8 +58,10 @@ window.addEventListener("load", function(){
                     <h4><a class="nombreDelArtista" href="detail_artist.html?id=${arrayRelated[i].artist.id}">${arrayRelated[i].artist.name}</a></h4>
                 </article>`
         
-            topSongs.innerHTML += contenedor; 
-            }                   
+            
+            } 
+             topSongs.innerHTML += contenedor;  
+
         })
         .catch( function(error){
             console.log(error);

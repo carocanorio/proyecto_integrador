@@ -22,9 +22,9 @@ window.addEventListener("load", function(){
                 <h5><a class="nombreDelArtista" href="detail_artist.html?id=${arraySongs[i].artist.id}">${arraySongs[i].artist.name}</a></h5>
                 <h3><a href="detail_track.html?id=${arraySongs[i].id}">${arraySongs[i].title}</a></h3>
             </article>`
-        topSongs.innerHTML += conten; 
+        
         } 
-                   
+           topSongs.innerHTML += conten;         
     })
     .catch( function(error){
         console.log(error);
@@ -50,9 +50,9 @@ window.addEventListener("load", function(){
                 <h5><a class="nombreDelArtista" href="detail_artist.html?id=${arrayAlbums[i].artist.id}">${arrayAlbums[i].artist.name}</a></h5>
                 <h3><a href="detail_album.html?id=${arrayAlbums[i].id}">${arrayAlbums[i].title}</a></h3>
             </article>`
-        topAlbums.innerHTML += contenedor; 
+        
         } 
-                   
+           topAlbums.innerHTML += contenedor;         
     })
     .catch( function(error){
         console.log(error);
@@ -79,9 +79,9 @@ window.addEventListener("load", function(){
                 <a href="detail_artist.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].picture_big}" alt="artista imagen"></a>
                 <h4><a href="detail_artist.html?id=${arrayRelated[i].id}">${arrayRelated[i].name}</a></h4>
             </article>`
-        topArtists.innerHTML += contenedo; 
+        
         } 
-                   
+          topArtists.innerHTML += contenedo;          
     })
     .catch( function(error){
         console.log(error);
