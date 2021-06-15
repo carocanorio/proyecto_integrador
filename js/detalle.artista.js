@@ -42,7 +42,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
                 contenidoLista += `
                         <li class="top"> 
                             <a href="detail_album.html?id=${arrayInfo[i].id}">
-                            <img width="30px" src="${arrayInfo[i].cover_small}" alt="Album Small"> ${arrayInfo[i].title}</a> 
+                            <img width="100px" src="${arrayInfo[i].cover_medium}" alt="Album Small"> ${arrayInfo[i].title}</a> 
                         </li>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
         
             

@@ -80,7 +80,7 @@ window.addEventListener("load", function(){
     
     //Chequear que el id esté en el array para cambiar el texto al usuario.
     if(favoritos.includes(id)){
-        document.querySelector('.si2').innerHTML = `<i class="fas fa-heart"></i> Quitar de favoritos`;
+        document.querySelector('.si2').innerHTML = `<i class="fas fa-heart"></i> Quitar de mí playlist`;
     }
     
     //Cuando el usuario haga click en "agregar a favoritos _> Agregar id dentro del array.
@@ -99,7 +99,7 @@ window.addEventListener("load", function(){
             //Guardamos el id en el array
             favoritos.push(id);
             console.log(favoritos);
-            document.querySelector('.si2').innerHTML = `<i class="fas fa-heart"></i> Quitar de favoritos`;
+            document.querySelector('.si2').innerHTML = `<i class="fas fa-heart"></i> Quitar de mí playlist`;
         }
 
         //Armamos un string

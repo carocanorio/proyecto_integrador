@@ -230,6 +230,12 @@ h3 {
     color: white;
     font-size: 22px;
 }
+.nombre, .genero, .fecha, .halsey{
+    font-size: 40px;
+}
+.hal{
+    font-size: 30px;
+}
 .si2{
     padding: 12px;
     background-color: black ;
@@ -273,10 +279,12 @@ h3 {
     margin-left: 5%;
 }
 .she2{
-    font-size: 30px;
+    font-size: 40px;
 }
 .top{
     margin: 6px;
+    font-size: 35px;
+    margin: 2%;
 }
 .titulo{
     color: white;
@@ -284,7 +292,7 @@ h3 {
     padding-top: 70px;
     padding-bottom: 20px;
     margin: 1%;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 
