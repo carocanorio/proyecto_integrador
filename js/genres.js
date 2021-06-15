@@ -27,7 +27,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
             for(let i=1; i<arrayInfo.length; i++){ //bucle  que recorre array de generos
                 contenido += ` <article class="genres">   
 
-                                     <a href="detail-genres.html?id=${arrayInfo[i].id}"><img class="genero-img" src="${arrayInfo[i].picture}" alt="genre imagen"></a>
+                                     <a href="detail-genres.html?id=${arrayInfo[i].id}"><img class="genero-img" src="${arrayInfo[i].picture_big}" alt="genre imagen"></a>
                                      <h4><a class="genero" href="detail-genres.html?=${arrayInfo[i].id}">${arrayInfo[i].name}</a></h4>
               
                                 </article> `
