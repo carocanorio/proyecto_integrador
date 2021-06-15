@@ -5,10 +5,10 @@ Los resultados deberán ser hipervínculos a las páginas de detalle correspondi
 Para el caso de no haber resultados que coincidan con el término buscado la página debe avisar al usuario que no hay coincidencias.
 */
 
-window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
+window.addEventListener('load', function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
 
-    let loader = document.querySelector(".gif");
-    loader.style.display = "none"; //esconderlo, si no le pongo comillas el lenguaje interpreta q estoy escribiendo una variable
+    let loader = document.querySelector('.gif');
+    loader.style.display = 'none'; //esconderlo, si no le pongo comillas el lenguaje interpreta q estoy escribiendo una variable
     
     let queryString = location.search; //retorna la infomación en cadena de texto (dificil procesar y manipular), almaccena QS de una url
     let queryStringObj = new URLSearchParams (queryString);  //la transformamos en Objeto literal
@@ -17,7 +17,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/charts/albums`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${search}`;
     
     fetch ( url ) //consultando la API
         .then (function (response){
@@ -25,54 +25,52 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         })
         .then (function (data){
 
-            console.log(data);
-            let informacion = data.data;
-            let section = document.querySelector(".contenedor_artistas_home");
-            let resultados = "";
+            
+            let artistasData = data.data;
+            let artistas = document.querySelector(".contenedor_artistas_home");
 
-            for (let i=0; i<informacion.length; i++){
-                resultados += `<section class="artistas_home result-item">
-                <h4>${informacion[i].title} </h4>
-                <img src="${informacion[i].images.original.url}"> </a>
-                </section class="artistas_home result-item">
-                `
-            }
-
-            section.innerHTML += resultados
+                artistas += `
+                <article class="artistas_home">    
+                    <a href="detail_artist.html?id=${artistasData[i].search}"><img src="${artistasData[i].picture_big}" alt="artista imagen"></a>
+                    <h4><a href="detail_artist.html?id=${artistasData[i].search}">${artistasData[i].name}</a></h4>
+                </article>`
+           
         })
         .catch( function(error){
             console.log(error);
         })
-})  
+        
+    //validar formulario de búsqueda  
+    let formularioValid = document.querySelector("form");
+    let campoBuscar = document.querySelector("[name = search]");
+    let alert = document.querySelector(".alerta");
+    let closeIcon = document.querySelector(".closeIcon");
 
-//validar formulario de búsqueda  
-let formulario = document.querySelector("form");
-let campoBuscar = document.querySelector("[name = search]");
-let alert = document.querySelector(".alerta");
-let closeIcon = document.querySelector(".closeIcon");
-
-formulario.addEventListener("submit" , function(e){
-    e.preventDefault();
+    formularioValid.addEventListener("submit" , function(e){
+        e.preventDefault();
 
     //Chequear si hay datos. que no este vacio
 
-    if(campoBuscar.value == ""){
-        alert.innerText = "El campo no puede estar vacío";
-        closeIcon.style.display = "inline" 
-    }else if( campoBuscar.value.length < 3){
-        alert.innerText = "Por favor ingrese más de 3 carácteres";
-        closeIcon.style.display = "inline" 
-    }else{
-        this.submit(); //el this hace referencia al formulario
-    }
-})
+        if(campoBuscar.value == ""){
+            alert.innerText = "El campo no puede estar vacío";
+            closeIcon.style.display = "inline" 
+        }else if( campoBuscar.value.length < 3){
+            alert.innerText = "Por favor ingrese más de 3 carácteres";
+            closeIcon.style.display = "inline" 
+        }else{
+            this.submit(); //el this hace referencia al formulario
+        }
+    })
 
-//Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
+    //Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
+    campoBuscar.addEventListener("input" , function(){
+        alert.innerText = "";
+        closeIcon.style.display = "none"
+    })
 
-campoBuscar.addEventListener("input" , function(){
-    alert.innerText = "";
-    closeIcon.style.display = "display"
-})
+})  
+
+
 
 
 

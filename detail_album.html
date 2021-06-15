@@ -16,7 +16,23 @@
 
         <form action="search-results.html" method="GET">
             <input type="search" name="search" value=""  placeholder="Buscar en Hurrian">
-            <button type="submit">Buscar</button>
+            <i class="fas fa-exclamation-circle closeIcon"></i>
+            <button type="submit"><i class="fas fa-search search"></i></button>
+            <p class="alerta"></p>
+
+            <div class="filtros">
+                <input type="radio" id="todos" name="busqueda" value="Todos">
+                <label for="Todos">Todos</label>
+                <input type="radio" id="artista" name="busqueda" value="Artista">
+                <label for="Artista">Artistas</label>
+                <input type="radio" id="cancion" name="busqueda" value="Cancion">
+                <label for="Cancion">Canciones</label>
+                <input type="radio" id="album" name="busqueda" value="Album">
+                <label for="Album">Álbumes</label>
+                <input type="radio" id="genero" name="busqueda" value="Género">
+                <label for="Generos">Géneros</label>
+            </div>
+            
         </form>
 
         <ul class="menu">
@@ -25,29 +41,39 @@
             <li><a  class="pre" href="playlist.html">  Mi playlist  </a></li>
             <li class="logo"><img width="50px" src="./img/logo.hurrian.blanco.png" alt="Logo"></li>
         </ul>
-        
+
     </header>
   
     <!--título principal-->
     <section class="album">
-        <h1 class="dom"></h1>
+        <h1 class="she"></h1>
     </section>
 
     <!--información sobre el album-->
     <section class="artist">
 
-         <div class="imgartist">
-            <img width="400px"  class="detalle" src="" alt="Foto del Album">
-        </div>
+         <div class="imgartist"></div>
 
         <aside class="info">
-            <h4 class="halsey">Lista de canciones:
+
+            <h4 class="nombre">Artista: </h4>
+
+            <h4 class="genero">Género: </h4>
+
+            <h4 class="fecha">Fecha de publicación: </h4>
+
+            <h4 class="halsey">Tracklist:
                 <ol class="lista1">
                 </ol>
             </h4>
+
         </aside>
 
     </section>
+
+    <h1 class="titulo">Los albums más escuchados de esta semana</h1>
+
+    <section class="contenedor_artistas_home"></section>
 
     <!--pie de página-->
     <footer> 

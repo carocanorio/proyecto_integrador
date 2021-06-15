@@ -4,6 +4,11 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     console.log ('holaaa');
 
 
+//validar formulario de búsqueda  
+let formulario = document.querySelector("form");
+let campoBuscar = document.querySelector("[name = search]");
+let alert = document.querySelector(".alerta");
+let closeIcon = document.querySelector(".closeIcon");
 
     let queryString = location.search //Caputramso qs
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
@@ -34,7 +39,6 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
             console.log(error);
 
         })
-
 
 
 })

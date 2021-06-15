@@ -16,7 +16,23 @@
 
         <form action="search-results.html" method="GET">
             <input type="search" name="search" value=""  placeholder="Buscar en Hurrian">
-            <button type="submit">Buscar</button>
+            <i class="fas fa-exclamation-circle closeIcon"></i>
+            <button type="submit"><i class="fas fa-search search"></i></button>
+            <p class="alerta"></p>
+
+            <div class="filtros">
+                <input type="radio" id="todos" name="busqueda" value="Todos">
+                <label for="Todos">Todos</label>
+                <input type="radio" id="artista" name="busqueda" value="Artista">
+                <label for="Artista">Artistas</label>
+                <input type="radio" id="cancion" name="busqueda" value="Cancion">
+                <label for="Cancion">Canciones</label>
+                <input type="radio" id="album" name="busqueda" value="Album">
+                <label for="Album">Álbumes</label>
+                <input type="radio" id="genero" name="busqueda" value="Género">
+                <label for="Generos">Géneros</label>
+            </div>
+            
         </form>
 
         <ul class="menu">
@@ -28,15 +44,28 @@
 
     </header>
 
-    <section class="artisthalsey">     
-    </section>
+    <section class="artisthalsey"></section>
     
     <!--información sobre el artista-->
     <section class="artist">
 
+        <div class="imgartist"></div>
+          
         <aside class="contenido">
+            <h4 class="she2">Top álbums:
+                <ol class="toptracks">
+
+                </ol>
+            </h4>
         </aside>
+
     </section>
+
+    <h1 class="titulo">Artistas relacionados</h1>
+
+    <section class="contenedor_artistas_home">
+    </section>
+    
 
     <!--pie de página-->
     <footer> 
