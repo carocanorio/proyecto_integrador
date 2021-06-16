@@ -1,16 +1,16 @@
 window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
 
-    let queryString = location.search //Caputramos qs
-    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
-    let id = queryStringToObject.get('id');
+    let queryString = location.search //Caputramos qs, pero retorna esta info en cadena de texto
+    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL a la QS, pone cada atributo como propiedad del OL
+    let id = queryStringToObject.get('id'); //le pido un dato de la QS y lo capturo, en este caso el id. GET te pide q le pases en forma de cadena de texto el atributo de la URL del cual queres obtener la info
     
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}` 
     
-    fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
-        .then( function(response){ //procesa
-            return response.json(); //es otra promesa, necesita otro then para contenerla
+    fetch( url ) //Hace un pedido a una API
+        .then( function(response){ //en este primer response viene la respuesta HTML, viene con un monton de cosas que la API devuelve al fetch
+            return response.json(); //json me trae SOLO la info que esta en formato json
         })
-        .then( function(data){ //Aca muestro código
+        .then( function(data){ //Aca muestro código, como traigo info puntual no hago un for
     
             let section = document.querySelector('.artisthalsey'); //selecciono la seccion
             section.innerHTML += `<h1 class="she">${data.name}</h1>`;     //meto titulo
@@ -33,21 +33,21 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         })
         .then( function(data){ //Aca muestro código
 
-            let arrayInfo = data.data;
+            let arrayInfo = data.data; //Nos quedamos solo con el array de data, es optativa pero facilita el trabajo
             let topAlbums = document.querySelector(".toptracks");
-            let contenidoLista =""; //contenido dentro de la lista, a llenar
+            let contenidoLista =""; //definimos variable para poner el contenido
             console.log(data)
 
-            for(let i=0; i<5; i++){//bucle  que recorre array de albumes
-                contenidoLista += `
+            for(let i=0; i<5; i++){//bucle  que recorre array de albumes. Lo que está abajo es lo que quiero repetir, que cambien sus datos todo el tiempo
+                contenidoLista += ` 
                         <li class="top"> 
                             <a href="detail_album.html?id=${arrayInfo[i].id}">
                             <img width="100px" src="${arrayInfo[i].cover_medium}" alt="Album Small"> ${arrayInfo[i].title}</a> 
-                        </li>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
-        
+                        </li>` 
+                    //le paso a traves de detail artist los datos del id, armo una QS 
             
             } 
-            topAlbums.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
+            topAlbums.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista. De esta forma tengo todo el contenedor por un lado y el contenido por el otro, y después los uno
                 
         })
     
