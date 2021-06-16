@@ -10,7 +10,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         .then( function(response){ //en este primer response viene la respuesta HTML, viene con un monton de cosas que la API devuelve al fetch
             return response.json(); //json me trae SOLO la info que esta en formato json
         })
-        .then( function(data){ //Aca muestro código, como traigo info puntual no hago un forgi
+        .then( function(data){ //Aca muestro código, como traigo info puntual no hago un for
     
             let section = document.querySelector('.artisthalsey'); //selecciono la seccion
             section.innerHTML += `<h1 class="she">${data.name}</h1>`;     //meto titulo
