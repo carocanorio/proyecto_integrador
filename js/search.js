@@ -17,7 +17,7 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${search}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${formulario}`;
     
     fetch ( url ) //consultando la API
         .then (function (response){
@@ -28,13 +28,41 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
             
             let artistasData = data.data;
             let artistas = document.querySelector(".contenedor_artistas_home");
+            let contenido = '';
 
-                artistas += `
-                <article class="artistas_home">    
-                    <a href="detail_artist.html?id=${artistasData[i].search}"><img src="${artistasData[i].picture_big}" alt="artista imagen"></a>
-                    <h4><a href="detail_artist.html?id=${artistasData[i].search}">${artistasData[i].name}</a></h4>
-                </article>`
-           
+            for(let i=0; i<artistasData.length; i++){
+                contenido += `
+                                <article class="artistas_home">    
+                                    <a href="detail_artist.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].artist.picture_big}" alt="artista imagen"></a>
+                                    <h4><a href="detail_artist.html?id=${artistasData[i].formulario}">${artistasData[i].artist.name}</a></h4>
+                                </article>
+
+                                <article class="artistas_home">    
+                                    <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.cover_big}" alt="artista imagen"></a>
+                                    <h4><a href="detail_album.html?id=${artistasData[i].formulario}">${artistasData[i].album.title}</a></h4>
+                                </article>                                 
+                            `
+            }          
+              artistas.innerHTML += contenido;
+            
+            /* <article class="artistas_home">    
+                                <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.track.picture_big}" alt="artista imagen"></a>
+                                <h4><a href="detail_album.html?id=${artistasData[i].formulario}">${artistasData[i].album.track.title}</a></h4> */
+
+           /* let album = document.querySelector(".album_track_home_conteiner");
+            let contenidoAlbum = '';
+
+            for(let i=0; i<artistasData.length; i++){
+                contenidoAlbum +=  
+                                    `<article class="album_track_home">
+                                        <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.cover_big}" alt="Album"></a>
+                                        <h5><a class="nombreDelArtista" href="detail_artist.html?id=${arrayData[i].artist.id}">${arrayData[i].artist.name}</a></h5>
+                                        <h3><a href="detail_album.html?id=${artistasData[i].formulario}">${artistasData[i].album.title}</a></h3>
+                                    </article>`
+            }
+            album.innerHTML += contenidoAlbum; */
+
+
         })
         .catch( function(error){
             console.log(error);

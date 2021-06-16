@@ -2,10 +2,13 @@
 window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
 
     let queryString = location.search //Caputramso qs
-    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
+    let queryStringToObject = new URLSearchParams(queryString); 
     let id = queryStringToObject.get('id');
+    
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artist`
+    console.log(id);
+
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${id}/artists`
         
 
     fetch( url ) // hace el pedido
@@ -16,8 +19,10 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
              console.log(data);//Aca muestro el array
             let arrayInfo = data.data;
 
-           let nombreGenero= document.querySelector(".genres-detail-titulo");//agarrando el titulo principal de la página
-           nombreGenero.innerText = `Lo mejor del ${id.name}` //insertando en el h1 lo que el nombre del género que el usuario clicleó
+            let nombre = queryStringToObject.get('genre');
+    
+            nombreGenero= document.querySelector(".genres-detail-titulo");//agarrando el titulo principal de la página
+            nombreGenero.innerText = `Lo mejor del ${nombre}` //insertando en el h1 lo que el nombre del género que el usuario clicleó 
             
             let sectionAlbum = document.querySelector('.contenedor_artistas_home')
             let contenidoSection = '';
@@ -29,7 +34,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
                                         </article>   `                                    
                                 }
 
-                                sectionAlbum.innerHTML += contenidoSection;                                                       
+                        sectionAlbum.innerHTML += contenidoSection;                                               
               
         })
         .catch( function(error){
