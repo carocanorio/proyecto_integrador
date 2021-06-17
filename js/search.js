@@ -10,8 +10,9 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
     let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
     datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
 
-    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/artists`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${formulario}`;
     
+    //TODOS
     fetch ( url ) //consultando la API
     .then (function (response){ 
         return response.json();
@@ -25,9 +26,18 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
         for (let i=0; i<artistasData.length; i++){
             infoDeArtistas += `
             <article class="artistas_home">    
-                <a href="detail_artist.html?id=${artistasData[i].search}"><img src="${artistasData[i].picture_big}" alt="artista imagen"></a>
-                <h4><a href="detail_artist.html?id=${artistasData[i].search}">${artistasData[i].name}</a></h4>
-            </article>`
+                <a href="detail_artist.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].artist.picture_big}" alt="artista imagen"></a>
+                <h4><a href="detail_artist.html?id=${artistasData[i].formulario}">Artista: ${artistasData[i].artist.name}</a></h4>
+            </article>
+            <article class="artistas_home">    
+                <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
+                <h4><a href="detail_track.html?id=${artistasData[i].formulario}">Track: ${artistasData[i].title}</a></h4>
+            </article>
+            <article class="artistas_home">    
+                <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
+                <h4><a href="detail_album.html?id=${artistasData[i].formulario}">Album: ${artistasData[i].album.title}</a></h4>
+            </article>
+            `
         }
 
         artistas.innerHTML += infoDeArtistas
@@ -36,6 +46,38 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
     .catch( function(error){
         console.log(error);
     })
+
+    //FILTRO: ARTISTAS
+    if (formulario == "Artista"){
+        
+        fetch ( url ) //consultando la API
+        .then (function (response){ 
+            return response.json();
+        })
+        .then (function (data){
+    
+            let arrayDeArtistas = data.data;
+            let selectorDeArtistas = document.querySelector(".contenedor_artistas_home");
+            let filtroDeArtistas =""; 
+    
+            for (let i=0; i<arrayDeArtistas.length; i++){
+                infoDeArtistas += `
+                <article class="artistas_home">    
+                    <a href="detail_artist.html?id=${arrayDeArtistas[i].formulario}"><img src="${arrayDeArtistas[i].artist.picture_big}" alt="artista imagen"></a>
+                    <h4><a href="detail_artist.html?id=${arrayDeArtistas[i].formulario}">Artista: ${arrayDeArtistas[i].artist.name}</a></h4>
+                </article>
+                `
+            }
+    
+            selectorDeArtistas.innerHTML += filtroDeArtistas
+    
+        })
+        .catch( function(error){
+            console.log(error);
+        })
+    }
+    
+
         
     //validar formulario de búsqueda  
     let formularioValid = document.querySelector("form");
