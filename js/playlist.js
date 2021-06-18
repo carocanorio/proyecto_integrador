@@ -15,10 +15,10 @@ function mostrarFavs (id){
     })
 
     .then(function(data){
-        let musicContainer = document.querySelector('.music-container');//destino de los datos en el html
+        let musicContainer = document.querySelector('.track_home_conteiner');//destino de los datos en el html
         let resultados = ''
         musicContainer.innerHTML +=
-        `<article class="track_home_conteiner">
+        `
 
         <article class="track_home">
 
