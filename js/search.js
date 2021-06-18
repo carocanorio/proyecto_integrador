@@ -47,8 +47,9 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
         console.log(error);
     })
 
+
     //FILTRO: ARTISTAS
-    if (formulario == "Artista"){
+    if (formulario == "artista"){
         
         fetch ( url ) //consultando la API
         .then (function (response){ 
