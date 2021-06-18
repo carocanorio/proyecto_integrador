@@ -27,8 +27,8 @@ function mostrarFavs (id){
         </article>
 
        <article class="music-name">
-            <h6>${data.title}</h6>
-            <p>${data.artist.name}</p>
+            <h3>${data.title}</h3>
+            <h5 class="nombreDelArtista">${data.artist.name}</h5>
        </article>
     
         </article>   
@@ -38,7 +38,6 @@ function mostrarFavs (id){
     .catch( function(error){
         console.log(error);
     })
-
 
 }
 //que hay que hacer  para saber si hay datos?-> mostarlos.
