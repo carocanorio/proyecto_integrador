@@ -22,16 +22,11 @@ function mostrarFavs (id){
 
         <article class="track_home">
 
-        <article class="music-img">
+        
             <a href="detail_track.html?id=${data.id}"><img src="${data.album.cover_big}" width="200px" alt="Album Cover"></a>
-        </article>
-
-       <article class="music-name">
-            <h3>${data.title}</h3>
+             <h3>${data.title}</h3>
             <h5 class="nombreDelArtista">${data.artist.name}</h5>
-       </article>
-    
-        </article>   
+           
 
         </article> `
     })
