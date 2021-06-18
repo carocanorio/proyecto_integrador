@@ -1,54 +1,65 @@
-let urlAlbums = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`;
+let recuperoStorage = localStorage.getItem("favoritos");
 
-let recuperoStorage = localstorage.getItems("favoritos");
+let favoritos = JSON.parse(recuperoStorage);//obtengo el array
 
-//obtengo el array
-let favoritos = JSON.parse(recuperoStorage);
+for (i=0; i<favoritos.length; i++){
+    mostrarFavs (favoritos[i]); //recorro array de favoritos
+}
 
-//destno de los datos en el html
-let lista = document.querySelector('.lista');
+function mostrarFavs (id){
+    let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
+    fetch(url)
+
+	.then(function(response) {
+        return response.json();
+    })
+
+    .then(function(data){
+        let musicContainer = document.querySelector('.music-container');//destino de los datos en el html
+        let resultados = ''
+        musicContainer.innerHTML +=
+        `<article class="track_home_conteiner">
+
+        <article class="track_home">
+
+        <article class="music-img">
+            <a href="detail_track.html?id=${data.id}"><img src="${data.album.cover_big}" width="200px" alt="Album Cover"></a>
+        </article>
+
+       <article class="music-name">
+            <h6>${data.title}</h6>
+            <p>${data.artist.name}</p>
+       </article>
+    
+        </article>   
+
+        </article> `
+    })
+    .catch( function(error){
+        console.log(error);
+    })
 
 
-//opcional avusar al usuario que no hay gifs en su lista.
-
-
+}
 //que hay que hacer  para saber si hay datos?-> mostarlos.
 //como le muesero al usuario u gif si tengo cuatro id's -> necesitamos recorrer el array de favoritos
 
-for (let i=0; i<favoritos.length; i++){
+
 //este for deveria busar y mostarr los favritos ->la info del gif esta en gifhy, no esta aca -> hay que pedrile a gifhy los datos 
-	buscarYMostrarFavoritos(favoritos[i]);
-}
-
-function buscarYMostrarFavoritos(id){
-
-let url = 'https: ${favoritos[i]}
 
 //la matemos adenro del fecth y cn este la vamosa a procesar.
-fetch(url)
-	.then(funcion[response]{
-return response.json[];
-})
-.then(function
-//para mejorarlo podems hacer una funcion ques eejecute cada vez qye el codigo corre
-//tengo os datos capturaldos?-> si, en lsita!3) 
 
 
-}
+//Opcional avisar al usuario que no hay gifs en su lista.
 
-//no hay diferencia entre el for y la fucnion, pero de esta manera organizamos mejor el código
-
-//esto es lo q  ale le decia octa de hahacer en la practica de los simpsons
-
-//escribis el código una vez, la funcion es m+ás autonoma y se ejeciuta sola
+//Necesitamos recorrer el array de facoritos
 
 
-//que es el fetch? es una promesa!-> 
-// entonces no me vienen en el imismo orden del array porque el for esta ejecutadno 3 fech, 3 promesas, -> 
-//entonces las promesas se rsuelven en distinta velociadad. 
-//no impota lo q pase la info siempre va a venir
 
-//validar formulario de búsqueda  
+
+
+
+
 let formulario = document.querySelector("form");
 let campoBuscar = document.querySelector("[name = search]");
 let alert = document.querySelector(".alerta");
