@@ -23,21 +23,30 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
         let artistas = document.querySelector(".contenedor_artistas_home");
         let infoDeArtistas =""; 
 
+        for(let i=0; i<1; i++){
+            infoDeArtistas += 
+            `<article class="artistas_home">    
+                <a href="detail_artist.html?id=${artistasData[i].artist.id}"><img src="${artistasData[i].artist.picture_big}" alt="artista imagen"></a>
+                <h4><a href="detail_artist.html?id=${artistasData[i].artist.id}">Artista: ${artistasData[i].artist.name}</a></h4>
+            </article>`
+        }
+
         for (let i=0; i<artistasData.length; i++){
-            infoDeArtistas += `
-            <article class="artistas_home">    
-                <a href="detail_artist.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].artist.picture_big}" alt="artista imagen"></a>
-                <h4><a href="detail_artist.html?id=${artistasData[i].formulario}">Artista: ${artistasData[i].artist.name}</a></h4>
+            infoDeArtistas +=
+            `<article class="artistas_home">    
+                <a href="detail_track.html?id=${artistasData[i].id}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
+                <h4><a href="detail_track.html?id=${artistasData[i].id}">Track: ${artistasData[i].title}</a></h4>
             </article>
             <article class="artistas_home">    
-                <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
-                <h4><a href="detail_track.html?id=${artistasData[i].formulario}">Track: ${artistasData[i].title}</a></h4>
-            </article>
-            <article class="artistas_home">    
-                <a href="detail_album.html?id=${artistasData[i].formulario}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
-                <h4><a href="detail_album.html?id=${artistasData[i].formulario}">Album: ${artistasData[i].album.title}</a></h4>
-            </article>
-            `
+                <a href="detail_album.html?id=${artistasData[i].album.id}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
+                <h4><a href="detail_album.html?id=${artistasData[i].album.id}">Album: ${artistasData[i].album.title}</a></h4>
+            </article>`
+        }
+
+        let leyenda = document.querySelector(".leyenda");
+
+        if(formulario == ""){
+            leyenda.style.display = "inline";
         }
 
         artistas.innerHTML += infoDeArtistas
@@ -47,39 +56,7 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
         console.log(error);
     })
 
-
-    //FILTRO: ARTISTAS
-    if (formulario == "artista"){
-        
-        fetch ( url ) //consultando la API
-        .then (function (response){ 
-            return response.json();
-        })
-        .then (function (data){
-    
-            let arrayDeArtistas = data.data;
-            let selectorDeArtistas = document.querySelector(".contenedor_artistas_home");
-            let filtroDeArtistas =""; 
-    
-            for (let i=0; i<arrayDeArtistas.length; i++){
-                infoDeArtistas += `
-                <article class="artistas_home">    
-                    <a href="detail_artist.html?id=${arrayDeArtistas[i].formulario}"><img src="${arrayDeArtistas[i].artist.picture_big}" alt="artista imagen"></a>
-                    <h4><a href="detail_artist.html?id=${arrayDeArtistas[i].formulario}">Artista: ${arrayDeArtistas[i].artist.name}</a></h4>
-                </article>
-                `
-            }
-    
-            selectorDeArtistas.innerHTML += filtroDeArtistas
-    
-        })
-        .catch( function(error){
-            console.log(error);
-        })
-    }
-    
-
-        
+           
     //validar formulario de búsqueda  
     let formularioValid = document.querySelector("form");
     let campoBuscar = document.querySelector("[name = search]");
