@@ -420,12 +420,12 @@ h3 {
         min-height: 540px;
     }
     .sey{
-        width: 40vw;
+        width: 40%;
     }
 
     /*Detail Album*/
     .dom{
-        width: 45vw;
+        width: 45%;
     }
     .artist{
         display: flex;
@@ -434,7 +434,7 @@ h3 {
         justify-content: flex-start; 
     }
     .info{
-        width: 40vw;
+        width: 40%;
     }
 
     /*Detail artist*/
@@ -448,7 +448,7 @@ h3 {
         margin-top: 0;
         padding: 3%;
     }
-    .genres h4 {
+    .genres h4 a {
         font-size: 20px;
     }
     .genres_titulo1 {
@@ -577,10 +577,10 @@ h3 {
         margin-bottom: 5% ;
     }
     .img{
-        width: 50%;
+        width: 45%;
     }
     .detalle{
-        width: 50vw;
+        width: 45%;
         margin-top: 5%;
     }
     .track{
@@ -613,7 +613,7 @@ h3 {
         font-size: 11px;
     }
     .info{
-        width: 100vw;
+        width: 100%;
     }
 
     /*Detail artist*/
