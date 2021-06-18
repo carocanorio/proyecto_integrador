@@ -19,21 +19,23 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
     })
     .then (function (data){
 
+        let leyenda = document.querySelector(".leyenda");
+        if(data.data.length == 0){
+            leyenda.style.display = "block";
+        }
+
         let artistasData = data.data;
         let artistas = document.querySelector(".contenedor_artistas_home");
         let infoDeArtistas =""; 
-
-        for(let i=0; i<1; i++){
-            infoDeArtistas += 
-            `<article class="artistas_home">    
-                <a href="detail_artist.html?id=${artistasData[i].artist.id}"><img src="${artistasData[i].artist.picture_big}" alt="artista imagen"></a>
-                <h4><a href="detail_artist.html?id=${artistasData[i].artist.id}">Artista: ${artistasData[i].artist.name}</a></h4>
-            </article>`
-        }
+        console.log(data)
 
         for (let i=0; i<artistasData.length; i++){
             infoDeArtistas +=
             `<article class="artistas_home">    
+                <a href="detail_artist.html?id=${artistasData[i].artist.id}"><img src="${artistasData[i].artist.picture_big}" alt="artista imagen"></a>
+                <h4><a href="detail_artist.html?id=${artistasData[i].artist.id}">Artista: ${artistasData[i].artist.name}</a></h4>
+            </article>
+            <article class="artistas_home">    
                 <a href="detail_track.html?id=${artistasData[i].id}"><img src="${artistasData[i].album.cover_big}" alt="Imagen del Album"></a>
                 <h4><a href="detail_track.html?id=${artistasData[i].id}">Track: ${artistasData[i].title}</a></h4>
             </article>
@@ -42,13 +44,7 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
                 <h4><a href="detail_album.html?id=${artistasData[i].album.id}">Album: ${artistasData[i].album.title}</a></h4>
             </article>`
         }
-
-        let leyenda = document.querySelector(".leyenda");
-
-        if(formulario == ""){
-            leyenda.style.display = "inline";
-        }
-
+     
         artistas.innerHTML += infoDeArtistas
 
     })
