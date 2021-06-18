@@ -361,10 +361,8 @@ h3 {
     color: white;
     text-align:start;
 }
-.track_home{
-    display: flex;
-    width: 20%;
-}
+
+
 /*Search Results*/
 .result-titulo{
     color: white;
