@@ -407,10 +407,23 @@ h3 {
 @media (max-width: 768px){
 
     /*Detail Track*/
-    .eyesclosed{
-        height: 10vh;
-        margin-top: 7%;
-        margin-bottom: 7%;
+    .she{
+        font-size: 45px;
+    }
+    .nombre, .genero, .halsey, .fecha{
+        font-size: 20px;
+        width: 300px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
+    .player{
+        width: 200px;
+    }
+    .hal, .si2{
+        font-size: 15px;
+        padding: 6px;
+        width: 300px;
     }
     .track{
         display: flex;
@@ -424,9 +437,6 @@ h3 {
     }
 
     /*Detail Album*/
-    .dom{
-        width: 45%;
-    }
     .artist{
         display: flex;
         flex-direction: row;
@@ -436,10 +446,11 @@ h3 {
     .info{
         width: 40%;
     }
-
-    /*Detail artist*/
-    .galeria1{
-    width: 242px;
+    .top{
+        font-size: 17.5px;
+    }
+    .she2{
+        font-size: 20px;
     }
 
     /*géneros*/
@@ -627,16 +638,10 @@ h3 {
     .she2, .top, .she3{
         font-size: 11px;
     }
-    .biblioteca{
-        font-size: 22.5px;
-    }
     .halsi{
         font-size: 9px;
         margin-top: 3%;
         padding: 6px;
-    }
-    .galeria1{
-        width: 125px;
     }
 
     /*Search Results*/

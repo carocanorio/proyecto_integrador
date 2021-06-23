@@ -46,18 +46,18 @@ window.addEventListener("load", function(){
             
         let arrayInfo = data.data;
         let tracklist = document.querySelector(".lista1");
-        let contenidoLista =""; //contenido dentro de la lista, a llenar
+        let contenidoLista =""; 
         console.log(data)
 
-        for(let i=0; i<arrayInfo.length; i++){//bucle  que recorre array de track
+        for(let i=0; i<arrayInfo.length; i++){
             contenidoLista += `
                     <li class="top"> 
                         <a href="detail_track.html?id=${arrayInfo[i].id}"><i class="far fa-play-circle"></i>${arrayInfo[i].title}</a> 
-                    </li>` //INVESTIGAR ACÁ QUE HACE CADA COSA MEJOR
+                    </li>` 
         
         
         }
-            tracklist.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista
+            tracklist.innerHTML += contenidoLista; 
 
     })
     .catch( function(error){
@@ -67,18 +67,18 @@ window.addEventListener("load", function(){
     //TOP ALBUMS
     let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums`;
     
-    fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
-        .then( function(response){ //procesa
-                return response.json(); //es otra promesa, necesita otro then para contenerla
+    fetch( urlArtistas ) 
+        .then( function(response){ 
+                return response.json(); 
         })
-        .then( function(data){ //Aca muestro código
+        .then( function(data){ 
 
             let arrayRelated = data.data;
             let topAlbums= document.querySelector(".contenedor_artistas_home");
-            let contenedor =""; //contenido dentro de la lista, a llenar
+            let contenedor =""; 
             console.log(data)
 
-            for(let i=0; i<5; i++){//bucle  que recorre array de albumes
+            for(let i=0; i<5; i++){
                 contenedor += `
                 <article class="artistas_home">    
                     <a href="detail_album.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].cover_big}" alt="album imagen"></a>
@@ -105,7 +105,7 @@ window.addEventListener("load", function(){
     formulario.addEventListener("submit" , function(e){
         e.preventDefault();
 
-        //Chequear si hay datos. que no este vacio
+
 
         if(campoBuscar.value == ""){
             alert.innerText = "El campo no puede estar vacío";
@@ -114,11 +114,9 @@ window.addEventListener("load", function(){
             alert.innerText = "Por favor ingrese más de 3 carácteres";
             closeIcon.style.display = "inline" 
         }else{
-            this.submit(); //el this hace referencia al formulario
+            this.submit(); 
         }
     })
-
-    //Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
 
     campoBuscar.addEventListener("input" , function(){
         alert.innerText = "";

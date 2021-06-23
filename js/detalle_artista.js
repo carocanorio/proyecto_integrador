@@ -27,13 +27,13 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     //TOP ALBUMS
     let urlTop = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/albums`;
     
-    fetch( urlTop ) //Permite consultar la url de forma asincrónica, es una promesa
-        .then( function(response){ //procesa
-                return response.json(); //es otra promesa, necesita otro then para contenerla
+    fetch( urlTop ) 
+        .then( function(response){ 
+                return response.json(); 
         })
-        .then( function(data){ //Aca muestro código
-
-            let arrayInfo = data.data; //Nos quedamos solo con el array de data, es optativa pero facilita el trabajo
+        .then( function(data){
+            
+            let arrayInfo = data.data; //Nos quedamos solo con el array de data, es optativa pero facilita el 
             let topAlbums = document.querySelector(".toptracks");
             let contenidoLista =""; //definimos variable para poner el contenido
             console.log(data)
@@ -54,18 +54,18 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     //ARTISTAS RELACIONADOS
     let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}/related`;
     
-    fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
-        .then( function(response){ //procesa
-                return response.json(); //es otra promesa, necesita otro then para contenerla
+    fetch( urlArtistas ) 
+        .then( function(response){ 
+                return response.json(); 
         })
         .then( function(data){ //Aca muestro código
 
             let arrayRelated = data.data;
             let relatedArtists = document.querySelector(".contenedor_artistas_home");
-            let contenedor =""; //contenido dentro de la lista, a llenar
+            let contenedor =""; 
             console.log(data)
 
-            for(let i=0; i<5; i++){//bucle  que recorre array de albumes
+            for(let i=0; i<5; i++){
                 contenedor += `
                 <article class="artistas_home">    
                     <a href="detail_artist.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].picture_big}" alt="artista imagen"></a>
