@@ -1,16 +1,16 @@
 window.addEventListener("load", function(){ 
 
-    let queryString = location.search //Caputramos qs, pero retorna esta info en cadena de texto
-    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL a la QS, pone cada atributo como propiedad del OL
-    let id = queryStringToObject.get('id'); //le pido un dato de la QS y lo capturo, en este caso el id. GET te pide q le pases en forma de cadena de texto el atributo de la URL del cual queres obtener la info
+    let queryString = location.search 
+    let queryStringToObject = new URLSearchParams(queryString); 
+    let id = queryStringToObject.get('id'); 
     
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${id}` 
     
-    fetch( url ) //Hace un pedido a una API
-        .then( function(response){ //en este primer response viene la respuesta HTML, viene con un monton de cosas que la API devuelve al fetch
-            return response.json(); //json me trae SOLO la info que esta en formato json
+    fetch( url ) 
+        .then( function(response){ 
+            return response.json(); 
         })
-        .then( function(data){ //Aca muestro código, como traigo info puntual no hago un for
+        .then( function(data){
     
             let section = document.querySelector('.artisthalsey'); 
             section.innerHTML += `<h1 class="she">${data.name}</h1>`;     
