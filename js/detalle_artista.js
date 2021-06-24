@@ -12,11 +12,11 @@ window.addEventListener("load", function(){
         })
         .then( function(data){ //Aca muestro código, como traigo info puntual no hago un for
     
-            let section = document.querySelector('.artisthalsey'); //selecciono la seccion
-            section.innerHTML += `<h1 class="she">${data.name}</h1>`;     //meto titulo
+            let section = document.querySelector('.artisthalsey'); 
+            section.innerHTML += `<h1 class="she">${data.name}</h1>`;     
     
-            let img= document.querySelector(".imgartist"); //si no es entre comillas lo toma como variable
-            img.innerHTML += `<img width="400px" class="detalle"  src="${data.picture_big}" alt="Artista">` //agrego a y mantengp lo q estaba en img
+            let img= document.querySelector(".imgartist"); 
+            img.innerHTML += `<img width="400px" class="detalle"  src="${data.picture_big}" alt="Artista">` 
 
         })
         .catch( function(error){
@@ -33,21 +33,21 @@ window.addEventListener("load", function(){
         })
         .then( function(data){
             
-            let arrayInfo = data.data; //Nos quedamos solo con el array de data, es optativa pero facilita el 
+            let arrayInfo = data.data; 
             let topAlbums = document.querySelector(".toptracks");
-            let contenidoLista =""; //definimos variable para poner el contenido
+            let contenidoLista =""; 
             console.log(data)
 
-            for(let i=0; i<5; i++){//bucle  que recorre array de albumes. Lo que está abajo es lo que quiero repetir, que cambien sus datos todo el tiempo
+            for(let i=0; i<5; i++){
                 contenidoLista += ` 
                         <li class="top"> 
                             <a href="detail_album.html?id=${arrayInfo[i].id}">
                             <img width="100px" src="${arrayInfo[i].cover_medium}" alt="Album Small"> ${arrayInfo[i].title}</a> 
                         </li>` 
-                    //le paso a traves de detail artist los datos del id, armo una QS 
+                    
             
             } 
-            topAlbums.innerHTML += contenidoLista; //a top albums le agrego lo que puse en contenido lista. De esta forma tengo todo el contenedor por un lado y el contenido por el otro, y después los uno
+            topAlbums.innerHTML += contenidoLista; 
                 
         })
     
