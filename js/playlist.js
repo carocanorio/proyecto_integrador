@@ -1,9 +1,9 @@
 let recuperoStorage = localStorage.getItem("favoritos");
 
-let favoritos = JSON.parse(recuperoStorage);//obtengo el array
+let favoritos = JSON.parse(recuperoStorage);
 
 for (i=0; i<favoritos.length; i++){
-    mostrarFavs (favoritos[i]); //recorro array de favoritos
+    mostrarFavs (favoritos[i]); 
 }
 
 function mostrarFavs (id){
@@ -15,7 +15,7 @@ function mostrarFavs (id){
     })
 
     .then(function(data){
-        let musicContainer = document.querySelector('.track_home_conteiner');//destino de los datos en el html
+        let musicContainer = document.querySelector('.track_home_conteiner');
         let resultados = ''
         musicContainer.innerHTML +=
         `
@@ -44,8 +44,6 @@ let closeIcon = document.querySelector(".closeIcon");
 formulario.addEventListener("submit" , function(e){
     e.preventDefault();
 
-    //Chequear si hay datos. que no este vacio
-
     if(campoBuscar.value == ""){
         alert.innerText = "El campo no puede estar vacío";
         closeIcon.style.display = "inline" 
@@ -53,11 +51,9 @@ formulario.addEventListener("submit" , function(e){
         alert.innerText = "Por favor ingrese más de 3 carácteres";
         closeIcon.style.display = "inline" 
     }else{
-        this.submit(); //el this hace referencia al formulario
+        this.submit(); 
     }
 })
-
-//Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
 
 campoBuscar.addEventListener("input" , function(){
     alert.innerText = "";

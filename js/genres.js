@@ -1,5 +1,5 @@
 
-window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
+window.addEventListener("load", function(){ 
 
 
 
@@ -9,22 +9,21 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         
  
 
-         fetch( urlGeneros ) //Permite consultar la url de forma asincrónica, es una promesa
-             .then( function(response){ //procesa
-               return response.json(); //es otra promesa, necesita otro then para contenerla
+         fetch( urlGeneros ) 
+             .then( function(response){ 
+               return response.json(); 
          })
 
 
-          .then( function(data){ //Aca muestro código
+          .then( function(data){ 
     
             let arrayInfo = data.data;
-             //capturamos los destinos
             let generos = document.querySelector('.contenedor_generos');
-            let contenido =""; //contenido a mostrar dentro de la sección
+            let contenido =""; 
             console.log(data)
 
 
-            for(let i=1; i<arrayInfo.length; i++){ //bucle  que recorre array de generos
+            for(let i=1; i<arrayInfo.length; i++){ 
                 contenido += ` <article class="genres">   
 
                                      <a href="detail-genres.html?id=${arrayInfo[i].id}&genre=${arrayInfo[i].name}"><img class="genero-img" src="${arrayInfo[i].picture_big}" alt="genre imagen"></a>
