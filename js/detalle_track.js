@@ -1,20 +1,20 @@
 
 window.addEventListener("load", function(){
 
-    let queryString = location.search //Caputramos qs
-    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
+    let queryString = location.search 
+    let queryStringToObject = new URLSearchParams(queryString); 
     let id = queryStringToObject.get('id');
 
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${id}`;
 
-    fetch( url ) //Permite consultar la url de forma asincrónica, es una promesa
-    .then( function(response){ //procesa
-            return response.json(); //es otra promesa, necesita otro then para contenerla
+    fetch( url ) 
+    .then( function(response){ 
+            return response.json(); 
     })
-    .then( function(data){ //Aca muestro código
+    .then( function(data){ 
     
-        let section = document.querySelector('.she'); //selecciono la seccion
-        section.innerText += `${data.title}`;     //meto titulo
+        let section = document.querySelector('.she'); 
+        section.innerText += `${data.title}`;     
     
         let img= document.querySelector(".img");
         img.innerHTML += `<img width="400px"  class="detalle"   src="${data.album.cover_big}" alt="Album Cover">`
@@ -39,18 +39,18 @@ window.addEventListener("load", function(){
     //TOP SONGS
     let urlArtistas = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks`;
     
-    fetch( urlArtistas ) //Permite consultar la url de forma asincrónica, es una promesa
-        .then( function(response){ //procesa
-                return response.json(); //es otra promesa, necesita otro then para contenerla
+    fetch( urlArtistas ) 
+        .then( function(response){ 
+                return response.json(); 
         })
-        .then( function(data){ //Aca muestro código
+        .then( function(data){ 
 
             let arrayRelated = data.data;
             let topSongs= document.querySelector(".contenedor_artistas_home");
-            let contenedor =""; //contenido dentro de la lista, a llenar
+            let contenedor =""; 
             console.log(data)
 
-            for(let i=0; i<5; i++){//bucle  que recorre array de albumes
+            for(let i=0; i<5; i++){
                 contenedor += `
                 <article class="artistas_home">    
                     <a href="detail_track.html?id=${arrayRelated[i].id}"><img src="${arrayRelated[i].album.cover_big}" alt="album imagen"></a>
@@ -109,7 +109,7 @@ window.addEventListener("load", function(){
         console.log(localStorage);  
     })
 
-    //Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
+
     //validar formulario de búsqueda  
     let formulario = document.querySelector("form");
     let campoBuscar = document.querySelector("[name = search]");
@@ -119,8 +119,6 @@ window.addEventListener("load", function(){
     formulario.addEventListener("submit" , function(e){
         e.preventDefault();
 
-    //Chequear si hay datos. que no este vacio
-
         if(campoBuscar.value == ""){
             alert.innerText = "El campo no puede estar vacío";
             closeIcon.style.display = "inline" 
@@ -128,7 +126,7 @@ window.addEventListener("load", function(){
             alert.innerText = "Por favor ingrese más de 3 carácteres";
             closeIcon.style.display = "inline" 
         }else{
-            this.submit(); //el this hace referencia al formulario
+            this.submit(); 
         }
     }) 
 
