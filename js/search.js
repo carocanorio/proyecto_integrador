@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
+window.addEventListener('load', function(){
 
     let loader = document.querySelector('.gif');
     loader.style.display = 'none'; //esconderlo, si no le pongo comillas el lenguaje interpreta q estoy escribiendo una variable
@@ -7,13 +7,13 @@ window.addEventListener('load', function(){ //Evento que controla que todo el ht
     let queryStringObj = new URLSearchParams (queryString);  //la transformamos en Objeto literal
     let formulario = queryStringObj.get("search"); //name del campo input del formulario
 
-    let datoBuscado= document.querySelector(".result-titulo"); //agarrando el h1
-    datoBuscado.innerText = `Resultados para ${formulario}` //insertando en el h1 lo que el usuario buscó
+    let datoBuscado= document.querySelector(".result-titulo"); 
+    datoBuscado.innerText = `Resultados para ${formulario}` 
 
     let url = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${formulario}`;
     
     //TODOS
-    fetch ( url ) //consultando la API
+    fetch ( url ) 
     .then (function (response){ 
         return response.json();
     })

@@ -35,24 +35,6 @@ function mostrarFavs (id){
     })
 
 }
-//que hay que hacer  para saber si hay datos?-> mostarlos.
-//como le muesero al usuario u gif si tengo cuatro id's -> necesitamos recorrer el array de favoritos
-
-
-//este for deveria busar y mostarr los favritos ->la info del gif esta en gifhy, no esta aca -> hay que pedrile a gifhy los datos 
-
-//la matemos adenro del fecth y cn este la vamosa a procesar.
-
-
-//Opcional avisar al usuario que no hay gifs en su lista.
-
-//Necesitamos recorrer el array de facoritos
-
-
-
-
-
-
 
 let formulario = document.querySelector("form");
 let campoBuscar = document.querySelector("[name = search]");

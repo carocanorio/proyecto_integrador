@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
 
-    let queryString = location.search //Caputramos qs
-    let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL
+    let queryString = location.search;
+    let queryStringToObject = new URLSearchParams(queryString); 
     let id = queryStringToObject.get('id');
 
     //INFORMACION DEL ALBUM

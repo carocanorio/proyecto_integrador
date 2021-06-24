@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){ //Evento que controla que todo el html esté cargado en el navegador (window se carga antes que document)
+window.addEventListener("load", function(){ 
 
     let queryString = location.search //Caputramos qs, pero retorna esta info en cadena de texto
     let queryStringToObject = new URLSearchParams(queryString); //La transformamos en OL a la QS, pone cada atributo como propiedad del OL
@@ -58,7 +58,7 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
         .then( function(response){ 
                 return response.json(); 
         })
-        .then( function(data){ //Aca muestro código
+        .then( function(data){ 
 
             let arrayRelated = data.data;
             let relatedArtists = document.querySelector(".contenedor_artistas_home");
@@ -93,8 +93,6 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
     formulario.addEventListener("submit" , function(e){
         e.preventDefault();
 
-        //Chequear si hay datos. que no este vacio
-
         if(campoBuscar.value == ""){
             alert.innerText = "El campo no puede estar vacío";
             closeIcon.style.display = "inline" 
@@ -102,11 +100,9 @@ window.addEventListener("load", function(){ //Evento que controla que todo el ht
             alert.innerText = "Por favor ingrese más de 3 carácteres";
             closeIcon.style.display = "inline" 
         }else{
-            this.submit(); //el this hace referencia al formulario
+            this.submit(); 
         }
     })
-
-//Limpiar el mensaje de error cuando el usuario modifique el contenido del campo input, ya que antes seguía el error
 
     campoBuscar.addEventListener("input" , function(){
         alert.innerText = "";
